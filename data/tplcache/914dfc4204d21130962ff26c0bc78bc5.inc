@@ -1,0 +1,1 @@
+<li> <em class="laststudy">最近学习</em> <a target="_blank" href="/video/5673" class="studyvideo">[field:title /] (01:27) <i class="hasStudy">([field:pubdate function="MyDate('m-d',@me)"/])</i> </a> </li>

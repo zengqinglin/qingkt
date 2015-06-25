@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type"<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/style3.css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/jquery.skippr.css">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.scrollToTop.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.quicksand.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".titlebox").skippr();
+    
+    $(function() {
+    $("#toTop").scrollToTop(1000);
+});
+
+});
+</script>	
+</head>
+<!----/HEAD-->
+
+<body>
+
+	
+{dede:include filename="headrm.htm"/}
+<!---Slider-->
+<div class="titlebox-nobg" style="background-image:url(/templets/default/images/title05.jpg)">
+	&nbsp;</div>
+<div class="taglinebg" style="top:210px; height:130px;">
+	<div class="tagline" style="height:130px;">
+		<h1>
+			{dede:sql sql="SELECT  `typedir`, `typename` FROM `rm_arctype` WHERE `id`=~typeid~"}
+<a href="[field:typedir/]">[field:typename/]</a>
+{/dede:sql}</h1>
+	</div>
+</div>
+<!---/Slider---><!--Brief-->
+<div class="mediaboxbg">
+	<div class="mediabox" style="height:30px; padding-bottom:20px;">
+		{dede:field name='position'/}
+	</div>
+</div>
+
+<div class="rm_container">
+
+<a class="back" onclick="history.go(-1)" href="javascript:void(0);"></a>
+<h2 class="rm_sub_title">{dede:sql sql="SELECT  `typedir`, `typename` FROM `rm_arctype` WHERE `id`=~typeid~"}
+[field:typename/]
+{/dede:sql}<span class="line"><i></i></span></h2>
+<ul class="rm_tab_btn"><li class="active">{dede:field.title/}</li></ul>
+<div class="rm_se">
+
+{dede:field.body/}
+</div>
+
+
+</div>
+
+
+
+
+
+{dede:include filename="footerrm.htm"/}
+</body>
+<!-- body/////////////-->
+
+</html>

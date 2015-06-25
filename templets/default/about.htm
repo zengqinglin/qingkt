@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type"<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/style3.css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/jquery.skippr.css">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.scrollToTop.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.quicksand.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".titlebox").skippr();
+    
+    $(function() {
+    $("#toTop").scrollToTop(1000);
+});
+
+});
+</script>	
+</head>
+<!----/HEAD-->
+
+<body>	
+{dede:include filename="headrm.htm"/}
+
+<!---Slider-->
+<div class="titlebox-nobg" style="background-image:url({dede:global.cfg_templets_skin/}/images/aboutus2.jpg); width:100%; height:450px;">
+</div>
+
+		<div class="taglinebg" style="top:210px; height:130px;">
+			<div class="tagline" style="height:130px;">
+				<h1 style="font-family:dinprolight">关于我们</h1>
+			</div>
+		</div>
+<!---/Slider--->	
+	
+<!--Brief-->
+<div class="mediaboxbg">
+	<div class="mediabox">
+		<h2>关于我们/ 公司</h2>
+	</div>
+</div>
+
+
+<div class="mediaboxbg">
+
+	<div class="mediabox" style="padding-bottom:200px;">
+	
+	
+<!--2Column-->
+		<div class="box500" style="width:45%; height:150px; margin-right:5%;">
+			<h1 style="font-size:20px;">润美是业界领先的品牌设计团队。</h1>
+			<h1 style="font-size:20px;">我们的目标：<b>创建顶尖的品牌形象。</b></h1>
+			
+
+		</div>
+
+
+		<div class="box500" style="width:45%; height:150px;">
+		</div>
+        <div class="contbox">
+        {dede:field.content/}
+		
+		<!--<div class="box500" style="width:45%; margin-right:5%;">
+			<p>郑州润美文化传媒有限公司是一家集品牌传播、营销策划、展会策划、广告制作、口碑营销于一体的专业策划传媒公司。	
+			</p>
+			<p>公司以“有创意、有态度、乐分享”为品牌主张，以全新的推广服务理念，深度整合河南本地以及国内顶级企业门户资源。业务涵盖展会、活动策划、公关活动、影视制作等不同领域。公司设立创意、美术、推广、执行、业务五大职能部门，对新时代营销模式下的产品迭代以及策划协同都有着丰富的实战经验。为客户提供量身定做，一对一的专业服务，简悦实效，帮助客户实现自我品牌和企业利润的双赢。
+            </p>
+			<p>润美传媒秉承着“创意改变平庸，专业把控未来”的思想。以公司高素质、高水平的专业团队以及展会、活动、设计等诸多成功案例来取得市场满意度的认可。“从服务创意，到完美的创意服务”，是润美传媒思考与行动的起点。润美传媒以自身独特的多元化和对各行各业的精准探索为起点，帮助客户打造一个突破常规的智享愿景，成为企业不可或缺的忠实拍档.
+			</p>
+			<p>我们非常愿意为您提供高效率、高品质、优设计的方案和有情谊的服务。
+			</p>
+            <P>　我们希望可以做一点不一样的事情，去影响甚至改变你我的世界。</br>
+无论您是如何发现润美，</br>
+我们都愿闻其详，以诚相待。</br>
+因为在这里即将谱写出的，
+是关于你们，也是关于我们的故事。
+从您了解润美传媒开始，一切都不平常。</br>
+            </P>
+		</div>
+		
+		<div class="box500" style="margin-bottom:130px;">
+			<img src="{dede:global.cfg_templets_skin/}/images/team2013.jpg">
+			<img src="{dede:global.cfg_templets_skin/}/images/photo-05.jpg">
+		</div>-->
+		
+		
+
+
+
+	
+	</div>
+</div>
+<!--/Brief-->
+
+
+{dede:include filename="footerrm.htm"/}
+</body>
+<!-- body/////////////-->
+
+</html>

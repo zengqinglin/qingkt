@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>webrx-title</title>
+<meta name="description" content="简介">
+<meta name="keywords" content="关键字">
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<script src="jquery-1.8.3.min.js"></script>
+
+<style>
+*{ margin:0; padding:0;}
+.model{ width:350px; height:300px; box-shadow:0 0 10px rgba(0,0,0,.4); border-radius:8px; padding:1em; padding-top:0; position:relative; z-index:100; background-color:#fff; display:none;}
+.model-header{border-bottom:1px solid #eaeaea; height:35px; line-height:35px; text-align:center;}
+.close{ position:absolute; top:0; right:15px; height:35px; line-height:35px; text-align:center; display:block; color:#666; cursor:pointer;}
+.close:hover{ color:#A30D10;}
+.mask{ background-color:#000; width:100%; height:100%; opacity:.3; filter:alpha(opacity=30); position:absolute; left:0; top:0; z-index:0; display:none;}
+.model2{ width:550px;}
+</style>
+<script>
+$(function(){
+	$(".open").click(function(){
+		pop($(this));
+		})
+		
+		
+		
+		
+		
+		
+function pop(a){
+	//alert(a.attr("rel"));	
+		var elem=$(a.attr("rel"));
+		//alert(a.attr("rel"));
+		//alert(elem);
+		resizeModel();
+	    elem.show();
+		$(".mask").fadeIn();
+
+	function resizeModel(){
+		var $bw=$(window).width();//浏览器的宽
+		var $bh=$(window).height();
+		var $w=elem.width();//弹出的内容宽
+		var $h=elem.height();
+		elem.css({"postion":"fixed","left":(($bw-$w)/2),"top":($bh-$h)/2});
+		$(".mask").css({"postion":"absolute","left":0,"top":0,"width":$bw,"height":$bh});
+		}
+	$(window).resize(function(){
+		resizeModel();
+		});
+		
+	$(".close").click(function(){
+		$(this).parent().parent().hide();
+		$(".mask").fadeOut(200);
+	})
+	$(document).keydown(function(e){
+	
+		if(e.keyCode==27){
+			
+			$(".close").trigger("click");
+			}
+		})
+}
+	
+	})
+</script>
+</head>
+
+<body>
+<a href="javascript:void(0)" class="open" rel=".model1">登陆</a>
+<a href="javascript:void(0)" class="open" rel=".model2">登陆2</a>
+<a href="javascript:void(0)" class="open" rel=".model1">登陆还是1</a>
+<div class="model model1">
+  <div class="model-header">
+    <h3>弹出标题</h3>
+    <span class="close">×</span> </div>
+  <div class="model-body"> 弹出内容 </div>
+  <div class="model-footer"></div>
+</div>
+
+
+<div class="model model2">
+  <div class="model-header">
+    <h3>弹出标题2</h3>
+    <span class="close">×</span> </div>
+  <div class="model-body"> 弹出内容2 </div>
+  <div class="model-footer"></div>
+</div>
+
+<div class="mask"></div>
+</body>
+</html>

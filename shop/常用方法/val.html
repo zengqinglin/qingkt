@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>webrx-title</title>
+<meta name="description" content="简介">
+<meta name="keywords" content="关键字">
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<style>
+*{ margin:0; padding:0;}
+div{ padding:50px; border:1px solid green; margin-left:25px; position:relative;}
+.bo{ border:5px solid yellow; width:300px; padding:20px; margin:50px;}
+p{}
+</style>
+<script src="../元素添加/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		/*$("#num").blur(function(){
+			var str=$(this).val();//取出表单的值
+			//alert(str);
+			var reg=new RegExp("^\\+?(86)?1\\d{10}$");//正则表达式
+			if(reg.test(str)){
+				alert("格式正确")
+				}else{
+					alert("格式错误");
+					}
+			
+			})
+			
+		$("p").click(function(){
+			//$(this).toggleClass("bo");//如果有bo就去掉bo  没有  添加boclass
+			if($(this).hasClass("bo")){
+				$(this).removeClass("bo")
+				}else{
+				$(this).addClass("bo");	
+					}
+			})*/
+			///$("#num").val("[p]    left:"+$("p").offset().left+" top"+$("p").offset().top);
+		//offset（）.left 元素离 浏览器边框的左边距离
+		//offset（）.top 元素离 浏览器边框的上边距距离
+	/*	var pl=$("p").position().left;//是指元素相对于 父辈元素（写过position ）的距离 如果都没有写 就是相对于 body元素
+		var pt=$("p").position().top;
+		$("#num").val("left:"+pl+"  top:"+pt);*/
+		//width  元素的内容宽度  css中设定的宽度
+		//alert($(".bo").width());
+		//innerWidth 元素的宽度+padding
+		//alert($(".bo").innerWidth());
+		//outerWidth 元素的宽度+padding+borderWidth
+		//outerWidth(true) 元素的宽度+padding+borderWidth+margin
+		///alert($(".bo").outerWidth(true));
+		//$(window).width() 浏览器的窗口宽度
+		//$(window).height()浏览器的窗口高度 
+		//$("body").height()//文档的高度
+		alert($("body").height());
+		
+		})
+</script>
+</head>
+
+<body>
+	<input type="text" id="num" placeholder="请输入电话号码"/>
+    
+   <div> <p class="bo">我们来试一试toogleclass</p></div>
+   <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+</body>
+</html>

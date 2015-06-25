@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ padding:0; padding:0;}
+body{ padding:50px;}
+ul,ol{ list-style:none;}
+h3,div,ul,li,ol{ margin:0; padding:0;}
+.content_right .ad { 
+	margin-bottom:10px;
+	width:586px; 
+	height:150px; 
+	overflow:hidden;
+	border:1px solid red;
+	position:relative;
+}
+.slider{ position:absolute; left:0; top:0;}
+ .slider li{ 
+	list-style:none;
+	display:inline;
+}
+.slider img{ 
+	width:586px; 
+	height:150px;
+	display:block;
+}
+.ad .num{
+	position:absolute;
+	right:5px; 
+	bottom:5px;
+	
+}
+.ad .num li{
+	float: left;
+	color: #FF7300;
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 12px;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 3px 1px;
+	border: 1px solid #FF7300;
+	background-color: #fff;
+}
+.ad .num li.on{
+	color: #fff;
+	line-height: 21px;
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	margin: 0 1px;
+	border: 0;
+	background-color: #FF7300;
+	font-weight: bold;
+}
+</style>
+<script src="scripts/jquery-1.3.1.js" type="text/javascript"></script>
+<script>
+
+$(function(){
+/*	var len  = 5;//动画的长度
+	 var index = 0;
+	 var adTimer;
+	 
+	 $(".num li").mouseover(function(){
+		index  =   $(".num li").index(this);
+		showImg(index);
+	 })
+	 
+	 function showImg(index){
+		   var adHeight = 150;
+		$(".slider").stop(true,false).animate({top : -adHeight*index},1000);
+		$(".num li").removeClass("on")
+			.eq(index).addClass("on");
+		 }*/
+		 
+	var index=0;//全局变量	 
+	var Id;
+	$(".num li").mouseover(function(){
+		index=$(".num li").index($(this));//查找 元素在选择器集合中的位置
+		show(index);
+		})
+	function show(i){
+		//$(".slider").css("top",-150*i);
+		$(".slider").stop(true,false).animate({"top":-150*i},600,function(){
+			if(index==6){//当做完动画后如果 index是6；说明是做一个了（到了我们复制的那个张了）
+				$(".slider").css("top",0);//让 .slider top瞬间回到0 
+				index=0;//index 给到第0张
+				}
+			});
+		if(index==6){//到第5张时候 第一个li on
+		 
+		$(".num .on").removeClass("on");//如果当前的index=6 过了最后面一个 让第0个添加on
+		$(".num li:eq("+0+")").addClass("on");	
+		
+		}else{//如果不是6 还是按i个添加 on
+			$(".num .on").removeClass("on");
+		$(".num li:eq("+i+")").addClass("on");
+		}
+	}
+	function auto(){
+	Id=setInterval(function(){		
+		show(index);
+		index++;
+		
+		},3000)
+	}
+	auto();//默认自动播放；	
+	$(".slider").hover(
+	function(){
+		clearInterval(Id);		
+		},
+	function(){
+		auto();
+		})
+	/*无缝*/
+	var $first=$(".slider li:first-child").clone();//找到元素的第1个复制一份
+	$(".slider").append($first);//放到ul的最后面
+	
+		 
+	})
+
+</script>
+</head>
+
+<body>
+<div class="content_right">
+	<div class="ad" >
+			 <ul class="slider" >
+				<li><img src="images/ads/1.gif"/></li>
+				<li><img src="images/ads/2.gif"/></li>
+				<li><img src="images/ads/3.gif"/></li>
+				<li><img src="images/ads/4.gif"/></li>
+				<li><img src="images/ads/5.gif"/></li>
+			  </ul>
+			  <ul class="num" >
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			  </ul>
+		</div>
+        </div>
+</body>
+</html>

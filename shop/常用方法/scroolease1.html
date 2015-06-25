@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+
+.fi{ position:fixed; height:50px; line-height:50px; background-color:#fefefe; width:100%; top:0; left:0;}
+ul{ list-style:none;}
+body{ background-color:#f0f0f0; padding-top:50px;}
+.fi .container{ width:1000px; margin:0 auto;}
+.container ul li{ float:left; width:120px; text-align:center;}
+.active{ background-color:#f80;}
+</style>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<!--<script type="text/javascript" src="jquery-1.4.2.js"></script>-->
+
+<script type="text/javascript">
+$(function(){
+$(".sc").css("height","600px");
+$(".sc:odd").css("background-color","yellow");
+
+$(".fi ul li").each(function(index, element) {
+    var i=index;
+	$(this).click(function(){
+		//$(".active").removeClass("active");
+		//$(this).addClass("active");
+		$("html,body").animate({"scrollTop":600*i},600);
+		})
+	
+});
+
+//$("html,body").scrollTop();
+//$(".sc:eq(1)").offset().top;	
+$(window).scroll(function(){
+	var ws=$(window).scrollTop();//窗口滚动过去的距离
+	
+	$(".sc").each(function(index, element) {//循环所有的屏幕
+        var i=index;
+		var st=$(".sc:eq("+i+")").position().top;//找到当前屏幕距顶部的距离
+		if(ws>=st-50){//如果 窗口滚动的距大于该元素到窗口顶端距离  说明已经滚动到当前屏幕了，
+			$(".active").removeClass("active");//让原来的active 取消 让 
+			$(".fi ul li:eq("+i+")").addClass("active");//让原来li对应当前屏幕的 li 添加active;
+			}
+		
+    });
+	
+	
+		
+	})
+	
+	})
+</script>
+</head>
+
+<body>
+<div class="fi"><div class="container"><ul><li class="active">第一屏</li><li>第二屏</li><li>第三屏</li><li>第四屏</li><li>第五屏</li><li>第六屏</li><li>第7屏</li></ul></div></div>
+<div class="sc"><h1>1</h1></div>
+<div class="sc"><h1>2</h1></div>
+<div class="sc"><h1>3</h1></div>
+<div class="sc"><h1>4</h1></div>
+<div class="sc"><h1>5</h1></div>
+<div class="sc"><h1>6</h1></div>
+<div class="sc"><h1>7</h1></div>
+</body>
+</html>

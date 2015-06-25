@@ -1,0 +1,1 @@
+INSERT INTO `rm_homepageset` VALUES('default/index.htm','../index.html','0');

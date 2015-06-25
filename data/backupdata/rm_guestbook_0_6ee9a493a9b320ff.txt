@@ -1,0 +1,8 @@
+INSERT INTO `rm_guestbook` VALUES('1','标题','0','1','0','admin','zengmumu','','','01','127.0.0.1','1415254304','1','zengmumu@31362');
+INSERT INTO `rm_guestbook` VALUES('2','you title','0','1','0','you name','','','','01','127.0.0.1','1415254953','1','mygod');
+INSERT INTO `rm_guestbook` VALUES('3','mumumumu','0','1','0','namnaem','','','','01','127.0.0.1','1415255278','1','textztezzxdft');
+INSERT INTO `rm_guestbook` VALUES('4','my gomc','0','1','0','zengmumu','zengmumu','','','','127.0.0.1','1415268550','1','my godd');
+INSERT INTO `rm_guestbook` VALUES('5','aaaaaaaaaaa','0','1','0','aaaaaaaaaaaaaaa','zengmumu@126.com','','','','127.0.0.1','1415269046','1','CCCCCCCCCCCCCCCCCCCCCCCCCCCCDDDDDDDDD');
+INSERT INTO `rm_guestbook` VALUES('6','asdfa','0','1','0','asdfaf','asdfa','','','','127.0.0.1','1415269946','1','asdfadfa');
+INSERT INTO `rm_guestbook` VALUES('7','asdfasdfasdfa','0','1','0','asdfasdfa','asdfaasdf','','','','127.0.0.1','1415270177','1','my nnnp my nnnp');
+INSERT INTO `rm_guestbook` VALUES('8','mumu','0','1','0','zengmumu','zengmumu@126.com','','','','127.0.0.1','1415505287','1','wo shi da tu xing');

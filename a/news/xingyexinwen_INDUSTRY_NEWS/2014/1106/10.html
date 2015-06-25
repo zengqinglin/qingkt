@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大战未打广告先行 双十一广告大战盘点_润美文化传媒</title>
+<meta name="keywords" content="13条,设计师,常犯,的,设计,错误,每个人,都会," />
+<meta name="description" content="每个人都会犯错，聪明的人善于发现错误，然后改正不良习惯。而有些人则置之不理" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body class="articleview">
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time">织梦CMS - 轻松建站从此开始！</span>
+     <div class="toplinks"><a href="/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="/data/sitemap.html" target="_blank">网站地图</a>|<a href="/tags.php">TAG标签</a><a href="/data/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://127.0.0.1');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('http://127.0.0.1','润美文化传媒')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="http://127.0.0.1"><img src="/templets/default/images/logo.gif" height="54" width="216" alt="润美文化传媒"/></a> </h1>
+      </div>
+      <div class="banner"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=ctenttpbanner1&charset=gbk"></script></div>
+      <div class="banner2"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=ctenttpbanner2&charset=gbk"></script></div>
+       
+	</div><!-- //top -->
+	<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>主页</span></a></li>
+      	
+      	<li><a href='/a/guanyurunmei_ABOUT/'  rel='dropmenu9'><span>关于润美 ABOUT</span></a></li>
+      	
+      	<li><a href='/a/service/'  rel='dropmenu12'><span>专长  SERVICE</span></a></li>
+      	<li class='hover'><a href='/a/news/'  rel='dropmenu6'><span>新闻观点  NEWS</span></a></li>
+      	<li><a href='/a/newtest/' ><span>newtest</span></a></li>
+      	
+      	<li><a href='/a/contact/' ><span>联系  CONTACT</span></a></li>
+      	
+      	<li><a href='http://127.0.0.1/plus/guestbook.php' ><span>在线留言</span></a></li>
+      	
+    	</ul>
+    </div>	
+    <div class="search">
+      <form  name="formsearch" action="/plus/search.php">
+        <div class="form">
+          <h4>搜索</h4>
+           <input type="hidden" name="kwtype" value="0" />
+           <input name="q" type="text" class="search-keyword" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="title" selected='1'>检索标题</option>
+               <option value="titlekeyword">智能模糊</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>
+        </div>
+        </form>
+        <div class="tags">
+          <h4>热门标签:</h4>
+          <ul>
+          
+          </ul>
+        </div>
+    </div><!-- //search -->
+		</div>
+	</div>
+</div><!-- //header -->
+
+<!-- /header -->
+<div class="w960 center clear mt1">
+<div class="pleft">
+ <div class="place"> <strong>当前位置:</strong> <a href='http://127.0.0.1/'>主页</a> > <a href='/a/news/'>新闻观点  NEWS</a> > <a href='/a/news/xingyexinwen_INDUSTRY_NEWS/'>行业新闻 DESIGN NEWS</a> >  </div>
+ <!-- /place -->
+ <div class="viewbox">
+  <div class="title">
+   <h2>大战未打广告先行 双十一广告大战盘点</h2>
+  </div>
+  <!-- /title -->
+  <div class="info"> <small>时间:</small>2015-06-02 03:00<small>来源:</small>mumu <small>作者:</small>网络 <small>点击:</small>
+   <script src="/plus/count.php?view=yes&aid=10&mid=1" type='text/javascript' language="javascript"></script>
+   次</div>
+  <!-- /info -->
+  
+  <div class="intro">每个人都会犯错，聪明的人善于发现错误，然后改正不良习惯。而有些人则置之不理</div>
+  
+  <div class="content">
+   <table width='100%'>
+    <tr>
+     <td><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top;"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentmidpicad&charset=gbk"></script></div>
+      <div class="zwnr01">
+	<p>
+		　　对于双十一这个购物节来说，不光是消费者们疯狂，各大商家们也很疯狂古时候打仗讲究大军未动粮草先行，现在讲究大战未打，广告先行。</p>
+	<p>
+		　　除了11.11降价的商品之外，各个商家在宣传期间的广告大战也是看点十足的，11.11比的就是头期宣传的阵仗，加上最后价格上的真章，我们来看一下到底谁和谁掐得厉害，我们今天就来娱乐一下11.11的这些电商们。</p>
+	<p>
+		　　狼烟四起群雄争霸11.11广告大战盘点</p>
+	<p>
+		　　要说11.11掐的最凶的当数&ldquo;猫狗大战&rdquo;，早在11月之前，京东就说到天猫11.11家电采取预售的方式属于耍流氓。</p>
+	<p>
+		　　离11.11还有一周时间，天猫与京东提前展开了新一轮&ldquo;猫狗大战&rdquo;，这是继去年11.11之后两家对家电市场的再次争夺。京东集团副总裁兼家电事业部总经理闫小兵今日接受腾讯家电采访时表示，&ldquo;双11&rdquo;当天京东将投放大量与天猫预售价格相当的家电爆品，消费者完全不需要被预售行为提前绑架。这是京东对此前天猫在本月19日公布&ldquo;双11&rdquo;首轮预售情况的回应。</p>
+	<p style="text-align: center;">
+		<img alt="" height="335" src="/uploads/allimg/141119/104031G58-0.jpg" width="500" /></p>
+	<p>
+		　　而11.11忙碌的不光只有京东和天猫，各大电商纷纷打出了自己关于11.11的降价促销大甩卖的活动，一时间&ldquo;11.11&rdquo;、&ldquo;双11&rdquo;的字样充斥了用户的电脑屏幕。今天我们就来一个广告大盘点，看看谁出招狠谁出招快，谁的出招更致命。</p>
+	<p>
+		　　在10月末，阿里发出通告函，称阿里集团已经取得了&ldquo;双十一&rdquo;注册商标，经阿里巴巴集团授权，天猫就&ldquo;双十一&rdquo;商标享有专用权、受法律保护，其他任何人的使用行为都是商标侵权行为。</p>
+	<p>
+		　　这是什么行为？这在民间就是一个词&mdash;&mdash;欠抽，而更是有业内人士爆料表示，阿里要求媒体封杀京东的广告，理由是京东的广告语使用了&ldquo;双十一&rdquo;字眼，而&ldquo;双十一&rdquo;乃是阿里的注册商标，任何其他公司机构不得使用。</p>
+	<p>
+		　　而对于马云的采访，他则说了这么一段话：&ldquo;第一，双十一的商标本来就不是我们的，双十一这个节日也不是属于我们的，我们的同事在设计的时候，三年以前就注册了，三年以前我们觉得这个双十一必须要成为全球化。尤其到去年我们确定要把双十一节变成全球双十一，不仅是中国，可能菲律宾、可能越南、可能美国，今年是意大利、法国、韩国已经开始起来，日本都开始起来。</p>
+	<p>
+		　　如何变成一个全球化?但是如何全球化，中国企业吃了很多亏，商标管理、知识产权方面，一直以来我们都是跟在别人后面，我也是在媒体上面看见阿里巴巴注册了双十一，这帮年轻人真的有远见、有想法，如果某一天一个国家他注册了，说他们的国家的，你也够头痛的，这种事情我们国家经常发生的，我们国家的一个历史上的人物或者别的事儿变成别的国家了</p>
+	<p>
+		　　我们欢迎任何人来使用的，其实今年我们花了很多心思让很多的商家来参与，包括线下的百货公司、百货大楼，但是我们杜绝一样事情，在双十一节的时候，恶意竞争，把自己输得很高，伤害消费者利益和伤害其他商家，因为这本来是一个狂欢日，不要搞成不舒服，这是我们的出发点。&rdquo;</p>
+	<p>
+		　　京东官方作出回应，称对同行抢注&ldquo;双十一&rdquo;商标并禁止他人使用表示遗憾。&ldquo;双十一&rdquo;已经成为全零售行业的节日，阿里注册&ldquo;双十一&rdquo;商标是垄断行为。京东还表示自己不会这么&ldquo;小气&rdquo;，明年618京东店庆时将广发&ldquo;英雄帖&rdquo;，邀请各位友商、同行共同参与618网购狂欢节，共同为消费者带去实惠和利益。</p>
+	<p>
+		　　不管真的假的，京东在面子上做足了。而本次京东研究了上一次11.11的综合情况，总结了自身的很多优势，大力宣传，扬长避短嘛。</p>
+	<p style="text-align: center;">
+		<img alt="" height="276" src="/uploads/allimg/141119/1040311642-1.jpg" width="534" /></p>
+	<p style="text-align: center;">
+		　　京东：无&ldquo;假货&rdquo;</p>
+	<p>
+		　　我们继续来看本次11.11，就预售方面天猫称，11.11之前已有数万消费者下定金购买6万余台大件家电。闫小兵表示天猫以预售的方式绑定消费者属于流氓行为。&ldquo;绑定销售是害怕顾客流失，集中一天销售更是噱头。&rdquo;他同时放话，一旦11.11期间对手公布销量，京东会公布品牌排名，还原真实销售数字。</p>
+	<p style="text-align: center;">
+		<img alt="" height="276" src="/uploads/allimg/141119/1040315526-2.jpg" width="537" /></p>
+	<p style="text-align: center;">
+		　　京东主打正品牌</p>
+	<p>
+		　　京东看准淘宝大多是以用户自营为主，需要靠眼光淘到便宜且货真价实的宝贝，自己主打出&ldquo;真&middot;正&middot;低&rdquo;也着重强调了京东以行货让消费者放心的目的。</p>
+	<p style="text-align: center;">
+		<img alt="" height="227" src="/uploads/allimg/141119/10403115K-3.jpg" width="527" /></p>
+	<p style="text-align: center;">
+		　　明星助阵</p>
+	<p>
+		　　明星造势自然也是不能少的啦，各大明星纷纷助阵，为京东拉人气。并且也都着重强调了&ldquo;好货真正低&rdquo;，看来买正品也是京东攻击对手的主要点。</p>
+	<p style="text-align: center;">
+		<img alt="" height="275" src="/uploads/allimg/141119/1040316428-4.jpg" width="539" /></p>
+	<p style="text-align: center;">
+		　　物流给力</p>
+	<p>
+		　　京东在目前来看，某些商品的售价确实要高出其他电商不少，可为什么京东屹立不倒？正品行货是第一，第二就是京东有自己的快递，这可是绝无仅有的，所以本次京东依然强调&ldquo;有本事你一天全送到用户手里&rdquo;。</p>
+	<p style="text-align: center;">
+		<img alt="" height="255" src="/uploads/allimg/141119/1040311S1-5.jpg" width="546" /></p>
+	<p style="text-align: center;">
+		　　打大型猫科动物&hellip;&hellip;</p>
+	<p>
+		　　&ldquo;上京东打大型猫科动物&rdquo;，这个猫科动物谁都心里明白不说出来而已，你说的是打老虎，实际上除了打猫解气，谁也不会想出来第二种结果了，反正你们互掐谁都看得出来。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img alt="" height="210" src="/uploads/allimg/141119/104031BR-6.jpg" width="546" /></p>
+	<p style="text-align: center;">
+		　　京东一条龙服务成为一大优势</p>
+	<p>
+		　　目前，京东家电主要是采取自营式为主，天猫平台更多是家电厂商旗下的专卖店入驻天猫。天猫自然拥有比京东在产品种类更齐全的优势。而京东阻击天猫的最有力的优势在于物流，在多个城市建立有仓库的京东号称大家电送货最快的电子商务交易平台。可以说两方你来我往互不相让，也打得难舍难分。我想11.11在天猫买东西就已经做好了物流乏力的思想准备，而在京东买东西也同样做好了商品品种匮乏的思想准备。</p>
+	<p>
+		　　随着&ldquo;11.11&rdquo;的临近，各大电商已经开始为销售活动摩拳擦掌大打广告促销，而与此同时，国家工商总局也加强了年末对电商的监管。</p>
+	<p>
+		　　国家工商总局召集阿里巴巴、京东、苏宁易购、携程等10家电商企业进行约谈，主要围绕如何对&ldquo;销售行为管理混乱&rdquo;的问题展开。</p>
+	<p>
+		　　面对&ldquo;11.11&rdquo;这类网络消费高峰期，工商总局发现，在消费者享受低价产品的同时，也出现了一些电商平台和网络商家对爆发性的大规模交易应对不足，从而侵害消费者合法权益、扰乱市场秩序的问题。</p>
+	<p>
+		　　工商总局在约谈会上提醒各大电商企业，&ldquo;11.11&rdquo;要防范先涨价后降价方法虚构优惠促销，欺骗消费者，严禁国家明令禁止销售的商品信息发布，不得因促销降低商品质量。</p>
+	<p style="text-align: center;">
+		<img alt="" height="241" src="/uploads/allimg/141119/104031E43-7.jpg" width="544" /></p>
+	<p style="text-align: center;">
+		　　天猫海报</p>
+	<p>
+		　　要说到淘宝，女人是天生的购物狂，而且淘宝上面价格看着确实诱人，这也让不少丈夫头疼不已，还纷纷想出&ldquo;防败家媳妇儿&rdquo;妙招。</p>
+	<p style="text-align: center;">
+		<img alt="" height="312" src="/uploads/allimg/141119/104031M49-8.jpg" width="546" /></p>
+	<p style="text-align: center;">
+		　　同样打偶像助阵牌</p>
+	<p>
+		　　请假防媳妇败家：去年网上有一条关于双11的热门微博，一位徐姓工程师晒出了自己的请假条截图，其中写道:&ldquo;媳妇收藏了不少天猫团购，11月11日请假1天，回家看着媳妇，防止败家，请领导批准。&rdquo;</p>
+	<p>
+		　　且不说这条消息的真假，据一项调查显示，购物超过20分钟以上，往往就会失去理智，这也就是为什么女性在购物方面更容易比男性疯狂的原因吧。</p>
+	<p style="text-align: center;">
+		<img alt="" src="/uploads/allimg/141119/10403120c-9.jpg" /></p>
+	<p style="text-align: center;">
+		　　这招够狠&hellip;&hellip;</p>
+	<p>
+		　　11.11凌晨，天猫&ldquo;11.11&rdquo;购物狂欢节将正式拉开序幕。据天猫商城介绍，11月11日凌晨，狂欢购物开始，一分钟内将有1370万人涌入天猫，其中，34万&ldquo;剁手党&rdquo;在这一分钟内将抢到心仪的宝贝，瞬时成交额将达到1.17亿元。</p>
+	<p style="text-align: center;">
+		<img alt="" height="271" src="/uploads/allimg/141119/104031K18-10.jpg" width="537" /></p>
+	<p style="text-align: center;">
+		　　天猫商品的种类谁都没法比啊</p>
+	<p>
+		　　据了解，今年的天猫11.11购物范围，将拓展至全球区域。面对汹涌而来的流量，成交数字预计也将不断刷新，同时，对技术、物流、客服将提出越来越高的要求。据不完全统计，超过万名阿里员工在当天将彻夜保障天猫11.11顺利进行，从网络、技术、设备等各方面进行保障。</p>
+	<p style="text-align: center;">
+		<img alt="" src="/uploads/allimg/141119/1040314M3-11.jpg" /></p>
+	<p style="text-align: center;">
+		　　术业有专攻在天猫行不通</p>
+	<p>
+		　　为了全面直观展现当天消费者购物场景和节日气氛，阿里巴巴在会议报告厅搭建了数字大屏，提供了七路实时信号。包括数据大盘、全球交易图、百强县交易图、热卖品牌榜，菜鸟物流雷达预警等。</p>
+	<p>
+		　　总的来说今年淘宝还是主打折扣大、品种全，在字面上并没有明着看出与京东在较劲，不过瞎子也能看出来现在的形式。对于今年的11.11，不管是淘宝销售额有多少，在几个小时突破了几百亿（没看人马云都心里有数么），关键还是淘宝的假货和物流问题，犹记得去年11.11，买个东西半个月才到，还得去自提点取货，这速度&hellip;&hellip;啧啧。新闻中说首位下单的用户在两小时就收到了货物这没什么，毕竟所有快递员都整装待发等着一吹哨撒丫子就跑呢。问题的关键是随着时间的推移，11.11下单的顾客越来越多，是否还能保证效率，且不说两小时送达，正常派送就可以了。</p>
+	<p>
+		　　在看完了&ldquo;猫狗大战&rdquo;之后，我们也不应该忘了其他电商关于11.11的筹备工作，毕竟两人胃口再打也不可能吃得下整个中国市场，下面来看下另一些电商的11.11。</p>
+	<p style="text-align: center;">
+		<img alt="" height="247" src="/uploads/allimg/141119/1040313C9-12.jpg" width="545" /></p>
+	<p style="text-align: center;">
+		　　1号店海报</p>
+	<p>
+		　　现在电商纷纷向商品全面化转变了，小编记得一开始说1号店人们第一个联想到的就是吃的和衣服鞋子。在去年11.11当天1号店全站流量逼近2000万，全天销售业绩年同比增长411%，移动客户端&ldquo;掌上1号店&rdquo;同比增长15倍。其中，进口牛奶日销售突破15个集装箱&hellip;&hellip;</p>
+	<p style="text-align: center;">
+		<img alt="" height="258" src="/uploads/allimg/141119/104031H53-13.jpg" width="549" /></p>
+	<p style="text-align: center;">
+		　　苏宁海报</p>
+	<p style="text-align: center;">
+		<img alt="" src="/uploads/allimg/141119/10403163H-14.jpg" /></p>
+	<p style="text-align: center;">
+		　　苏宁海报</p>
+	<p>
+		　　苏宁可以说是继&ldquo;猫狗大战&rdquo;之后同样具有竞争力的对手了，近年来苏宁易购做得风生水起，此次11.11也是打着&ldquo;一战到底&rdquo;的口号，&ldquo;欲与猫狗试比高&rdquo;啊。</p>
+	<p style="text-align: center;">
+		<img alt="" height="249" src="/uploads/allimg/141119/10403133T-15.jpg" width="545" /></p>
+	<p style="text-align: center;">
+		　　国美够霸气</p>
+	<p>
+		　　国美！谁也不会想到本次最具有攻击性的口号会在国美喊出，&ldquo;价保30天比某东贵再陪300元&rdquo;真霸气。不过小编想来想去你也不可能所有的商品全比某东便宜啊，难道最后还会出个&ldquo;最终解释权归国美所有&rdquo;的条例吗？</p>
+	<p style="text-align: center;">
+		<img alt="" height="222" src="/uploads/allimg/141119/1040313J1-16.jpg" width="547" /></p>
+	<p style="text-align: center;">
+		　　易迅网海报</p>
+	<p>
+		　　易迅在电脑产品、数码通讯、家居家电、汽车用品、鞋服百货这几类一直做得有声有色，并且接入微信支付之后更是人气不断提高，&ldquo;全网比价不服来拼&rdquo;也是火药味十足的宣传了，其中手机类分卖场更是大胆标出降到疯，最高直降1100元的的狠话。</p>
+	<p style="text-align: center;">
+		<img alt="" height="264" src="/uploads/allimg/141119/104031M35-17.jpg" width="546" /></p>
+	<p style="text-align: center;">
+		　　聚美优品海报</p>
+	<p style="text-align: center;">
+		<img alt="" height="264" src="/uploads/allimg/141119/1040311541-18.jpg" width="543" /></p>
+	<p style="text-align: center;">
+		　　唯品会海报</p>
+	<p>
+		　　聚美优品和唯品会都是女士主打，大多数男士都不怎么逛这两个网站，本次聚美优品也以粉色醒目位置打出广告语，背景配以紫色和化妆品，女人味儿十足（陈欧不知道有多少女性为之疯狂了）。</p>
+	<p>
+		　　唯品会则更直接，&ldquo;女王双11&rdquo;、&ldquo;女王的盛宴&rdquo;的招牌更是吸引了大批女性购物狂的眼球，这两家网站基本上明确避免了卷入&ldquo;猫狗大战&rdquo;的乱局。</p>
+	<p>
+		<span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img alt="" height="294" src="/uploads/allimg/141119/104031HP-19.jpg" width="546" />&nbsp;<span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span><span style="display: none;">&nbsp;</span></p>
+	<p style="text-align: center;">
+		　　亚马逊商城</p>
+	<p>
+		　　亚马逊这首页猛地一看，是不是太素净了，不过页面简单里面的道道却不简单，仔细看上边黑字，&ldquo;全球大牌&rdquo;，光全球这两字就足够让亚马逊骄傲的了。</p>
+	<p style="text-align: center;">
+		<img alt="" src="/uploads/allimg/141119/1040314124-20.jpg" /></p>
+	<p style="text-align: center;">
+		　　当当网</p>
+	<p>
+		　　这次11.11以女性商品为主打的网站不在少数，当当网虽然在服装方面种类比较齐全并且也首页也以各种服装为主，不过显然女性消费者在当当网还是占主导消费低位的。</p>
+	<p style="text-align: center;">
+		<img alt="" height="304" src="/uploads/allimg/141119/1040316443-21.jpg" width="537" /></p>
+	<p>
+		　　狼烟四起群雄争霸11.11广告大战盘点</p>
+	<p>
+		　　搜狗浏览器打假助手</p>
+	<p>
+		　　11.11可不仅是各大电商的战争，搜狗浏览器也在插不上脚的地方想办法插了一脚，这不，搜狗浏览器特别上线了&ldquo;11.11网购专版-剁手族的福音&rdquo;，在淘宝全网加速、图片加速、我要上淘宝等实用功能外，更调动其在大数据方面的技术优势，针对性地推出了&ldquo;搜狗打假助手&rdquo;，帮助用户看穿假货、次品，打造出史上最有特色的安全网购利器。</p>
+	<p>
+		　　在盘点了双十一广告大战之后，您是不是对于各个商家对于这个购物节的重视有所了解了呢？<a href="http://www.zzrmcm.com/"><font color="#888888">润美文化传媒</font></a>带您领略广告魅力。</p>
+</div>
+
+      
+      (责任编辑：admin)</td>
+    </tr>
+   </table>
+  </div>
+  <!-- /content -->
+  <div class="dede_pages">
+   <ul class="pagelist">
+    
+   </ul>
+  </div>
+  <!-- /pages -->
+  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',10)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',10)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(10);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <!-- //分享代码开始 -->
+  
+  <!-- //分享代码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/a/news/xingyexinwen_INDUSTRY_NEWS/2014/1106/9.html'>2015年广告先行，如何投放更有杀伤力！？</a> </li>
+     <li>下一篇：<a href='/a/news/xingyexinwen_INDUSTRY_NEWS/2014/1106/11.html'>中国社会主流意识变迁的广告镜像</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <div class="actbox">
+    <ul>
+     <li id="act-fav"><a href="/plus/stow.php?aid=10" target="_blank">收藏</a></li>
+     <li id="act-err"><a href="/plus/erraddsave.php?aid=10&title=大战未打广告先行 双十一广告大战盘点" target="_blank">挑错</a></li>
+     <li id="act-pus"><a href="/plus/recommend.php?aid=10" target="_blank">推荐</a></li>
+     <li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+    </ul>
+   </div>
+   <!-- /actbox -->
+  </div>
+  <!-- /handle -->
+ </div>
+ <!-- /viewbox -->
+ <!-- //AJAX评论区 -->
+ 
+ </div>
+<!-- //左边内容结束 -->
+<!-- //右边内容开始 -->
+<div class="pright"> 
+ <div class="pright">
+  <div>
+   <dl class="tbox">
+    <dt><strong>栏目列表</strong></dt>
+    <dd>
+     <ul class="d6">
+      
+      <li><a href='/a/news/gongsixinwen_OUR_NEWS/'>公司新闻 OUR NEWS</a></li>
+      <li><a href='/a/news/xingyexinwen_INDUSTRY_NEWS/' class='thisclass'>行业新闻 DESIGN NEWS</a></li>
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="contentRtPicAD" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad&charset=gbk"></script></div>
+  <div class="commend mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>推荐内容</strong></dt>
+    <dd class='light'>
+     <ul class="d4">
+      
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <!-- /commend -->
+  <div class="hot mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>热点内容</strong></dt>
+    <dd class='light'>
+     <ul class="c1 ico2">
+      <li><a href="/plus/view.php?aid=20">中国式的营销方法该改朝</a></li>
+<li><a href="/a/news/xingyexinwen_INDUSTRY_NEWS/2014/1106/9.html">2015年广告先行，如何投放</a></li>
+<li><a href="/a/news/xingyexinwen_INDUSTRY_NEWS/2014/1106/11.html">中国社会主流意识变迁的</a></li>
+<li><a href="/a/news/xingyexinwen_INDUSTRY_NEWS/2014/1106/8.html">4A公司该如何重拾光环--</a></li>
+<li><a href="/a/news/xingyexinwen_INDUSTRY_NEWS/2014/1106/10.html">大战未打广告先行 双十一</a></li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="contentRtPicAD2" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad2&charset=gbk"></script></div>
+ </div>
+ <!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=innerfooterad2&charset=gbk"></script></div>
+
+<!-- //底部模板 -->
+<div class="footer w960 center mt1 clear">
+	<!-- 
+		为了支持织梦团队的发展,请您保留织梦内容管理系统的链接信息.
+		我们对支持织梦团队发展的朋友表示真心的感谢!织梦因您更精彩!
+	-->
+    <div class="footer_left"></div>
+    <div class="footer_body">
+	<p class="powered">    
+		Powered by <a href="http://www.dedecms.com" title="织梦内容管理系统(DedeCms)--国内最专业的PHP网站管理系统，轻松建站的首选利器。" target="_blank"><strong>DedeCMS_V57_UTF8_SP1</strong></a> &copy; 2004-2011 <a href="http://www.desdev.cn/" target="_blank">DesDev</a> Inc.<br /><div class="copyright">Copyright &copy; 2002-2011 DEDECMS. 润美传媒 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a>&nbsp;&nbsp;</div></p>        
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+<!-- /footer -->
+</body>
+</html>

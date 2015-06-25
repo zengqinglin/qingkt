@@ -1,0 +1,697 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <title>Bootstrap 101 Template</title>
+
+     
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <style>
+
+      </style>
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <style>
+
+ </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">轻课</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">轻课堂</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">课程</a></li>
+             <li><a href="#">计划</a></li>            
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li>
+          <div class="search-area">
+            <form action=""  id="search"  name="search-form" method="get">
+                <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+                <input type="button" class="btn_search js-btn-search">
+                
+            </form>
+        </div>
+            <!---登录-->
+          </li>
+            <li><a href="/about/">登录</a></li>
+             <li><a href="/about/">注册</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!--导航ed-->
+  
+<div class="list-menu" id="list-menu">
+  <div class="container">
+    <div class="course-nav-box">
+      <div class="course-nav-hd">
+        <span>全部课程</span>
+        
+      </div>
+      <div class="course-nav-row clearfix">
+        <span class="hd l">方向：</span>
+        <div class="bd">
+          <ul class="">
+            <li class="course-nav-item on">
+              <a href="/course/list">全部</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=fe" data-ct="fe">前端开发</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=be" data-ct="be">后端开发</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=mobile" data-ct="mobile">移动开发</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=data" data-ct="data">数据处理</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=photo" data-ct="photo">图像处理</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="course-nav-row clearfix">
+        <span class="hd l">分类：</span>
+        <div class="bd">
+          <ul class="">
+            <li class="course-nav-item on">
+              <a href="/course/list?c=">全部</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=html" data-id="7" data-ct="fe">HTML/CSS</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=javascript" data-id="44" data-ct="fe">JavaScript</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=CSS3" data-id="1262" data-ct="fe">CSS3</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=html5" data-id="221" data-ct="fe">Html5</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=jquery" data-id="219" data-ct="fe">jQuery</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=angularjs" data-id="1123" data-ct="fe">AngularJS</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=nodejs" data-id="222" data-ct="fe">Node.js</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=bootstrap" data-id="1263" data-ct="fe">Bootstrap</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=webapp" data-id="1260" data-ct="fe">WebApp</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=fetool" data-id="1261" data-ct="fe">前端工具</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=php" data-id="1" data-ct="be">PHP</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=java" data-id="220" data-ct="be">JAVA</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=linux" data-id="468" data-ct="be">Linux</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=python" data-id="1118" data-ct="be">Python</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=C" data-id="1273" data-ct="be">C</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=C+puls+puls" data-id="1331" data-ct="be">C++</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=Go" data-id="1358" data-ct="be">Go</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=android" data-id="223" data-ct="mobile">Android</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=ios" data-id="955" data-ct="mobile">iOS</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=Unity+3D" data-id="1281" data-ct="mobile">Unity 3D</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=Cocos2d-x" data-id="1361" data-ct="mobile">Cocos2d-x</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=mysql" data-id="952" data-ct="data">MySQL</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=mongodb" data-id="958" data-ct="data">MongoDB</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=cloudcomputing" data-id="1122" data-ct="data">云计算</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=Oracle" data-id="1309" data-ct="data">Oracle</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=photoshop" data-id="953" data-ct="photo">Photoshop</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=maya" data-id="956" data-ct="photo">Maya</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?c=premiere" data-id="954" data-ct="photo">Premiere</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="course-nav-row clearfix">
+        <span class="hd l">难度：</span>
+        <div class="bd">
+          <ul class="">
+            <li class="course-nav-item  on">
+              <a href="/course/list?is_easy=0">全部</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?is_easy=1">初级</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?is_easy=2">中级</a>
+            </li>
+            <li class="course-nav-item ">
+              <a href="/course/list?is_easy=3">高级</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!--工具条-->
+    <div class="course-tool-bar clearfix">
+                <div class="tool-left l">
+                                            <a href="/course/list?sort=last" class="sort-item active">最新</a>
+                        <a href="/course/list?sort=pop" class="sort-item">最热</a>
+                          
+                </div>
+                <div class="l">
+                    <span class="tool-item" style="display: none;">
+                        <a class="follow-learn tool-chk" href="javascript:void();">跟我学</a>
+                    </span>
+                </div>
+                <div class="tool-right r">
+                          
+                    <span class="tool-item total-num">
+                        共<b>330</b>个课程
+                    </span>
+                    <span class="tool-item tool-pager">
+                                                <span class="pager-num">
+                            <b class="pager-cur">1</b>/<em class="pager-total">17</em>
+                        </span>
+                                                <a href="javascript:void()" class="pager-action pager-prev hide-text disabled">上一页</a>
+                        
+                                                <a href="/course/list?page=2" class="pager-action pager-next hide-text">下一页</a>
+                                
+                    </span>
+                </div>
+            </div>
+<!--工具条-->
+
+  </div>
+</div>
+<!--导航-->
+
+
+<div class="q-course">
+  <div class="container">
+
+   
+  <div class="course-list qkt-course-list">
+    <ul class="clearfix">
+       
+                                            
+                            
+    
+                                        <li class="course-one">
+            <a href="/view/413">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Android-精通Activity" src="images/demo1.jpg">
+                        </div>
+            <h5>
+                <span>Android-精通Activity</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">让你彻底明白Activity的工作原理</p>
+                                    <span class="l update-latest">更新至4-2</span>
+                                                
+                <span class="l ml20">
+                                828
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时27分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/416">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Python文件处理" src="http://img.mukewang.com/556ed6a200019cdc06000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Python文件处理</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">Python 文件操作指南</p>
+                                    <span class="l ">更新至4-1</span>
+                                                
+                <span class="l ml20">
+                                1546
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时39分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/394">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Linux C语言指针与内存" src="http://img.mukewang.com/55544c1a000151b906000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Linux C语言指针与内存</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">指针-C语言的核心</p>
+                                    <span class="l update-latest">更新至5-4</span>
+                                                
+                <span class="l ml20">
+                                1869
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/411">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Android-NDK入门" src="http://img.mukewang.com/556bc47900012bf206000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Android-NDK入门</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">本课程为NDK开发的初级课程</p>
+                                    <span class="l ">更新至4-5</span>
+                                                
+                <span class="l ml20">
+                                3151
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时12分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/407">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Gopher China 2015 上海大会" src="http://img.mukewang.com/5566ceb80001107a06000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Gopher China 2015 上海大会</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">go干货分享尽在Gopher China 2015上海大会 </p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                2530
+                                人学习</span>
+            </div>
+            <span class="time-label">10小时58分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/408">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="shell条件判断与流程控制" src="http://img.mukewang.com/5567c98d000139e206000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>shell条件判断与流程控制</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">shell实用案例学习，看这里！</p>
+                                    <span class="l update-latest">更新至8-1</span>
+                                                
+                <span class="l ml20">
+                                1383
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时50分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/406">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Android必学-异步加载" src="http://img.mukewang.com/55666c0a0001d6b506000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Android必学-异步加载</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">了解Android中的异步加载处理方法</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                4582
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时56分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/404">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="与《YII框架》不得不说的故事—基础篇" src="http://img.mukewang.com/55657fa600015fe206000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>与《YII框架》不得不说的故事—基础篇</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">揭开YII框架神秘面纱。</p>
+                                    <span class="l ">更新至6-1</span>
+                                                
+                <span class="l ml20">
+                                4030
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时37分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/400">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Cocos2d-x游戏开发初体验-C++篇" src="http://img.mukewang.com/5562c26900012f3406000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Cocos2d-x游戏开发初体验-C++篇</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">国足都出成绩了，你还不来学？</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                4689
+                                人学习</span>
+            </div>
+            <span class="time-label">52分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/401">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Java微信公众号开发进阶" src="http://img.mukewang.com/555ed1de000157b106000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Java微信公众号开发进阶</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">Java微信公众号开发的进阶课程！</p>
+                                    <span class="l ">更新至5-1</span>
+                                                
+                <span class="l ml20">
+                                6469
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时30分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/402">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="SVG实现Tooltip气泡效果" src="http://img.mukewang.com/5562dfc00001c06106000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>SVG实现Tooltip气泡效果</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">使用HTML5技术制作一个漂亮的SVG气泡效果！</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                3814
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时35分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/311">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Sass基础入门" src="http://img.mukewang.com/551d0920000100ff06000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Sass基础入门</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">Sass使你摆脱重复编写样css代码劳动。</p>
+                                    <span class="l update-latest">更新至4-17</span>
+                                                
+                <span class="l ml20">
+                                8065
+                                人学习</span>
+            </div>
+            <span class="time-label">5小时</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/398">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="MySQL开发技巧（一）" src="http://img.mukewang.com/555e9cdc0001ee9606000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>MySQL开发技巧（一）</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">DBA和开发人员都必备的技能。</p>
+                                    <span class="l ">更新至3-1</span>
+                                                
+                <span class="l ml20">
+                                8841
+                                人学习</span>
+            </div>
+            <span class="time-label">57分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/396">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Hibernate初探之单表映射" src="http://img.mukewang.com/5565784c00017cee06000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Hibernate初探之单表映射</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">入职必备—Java持久化框架Hibernate入门！</p>
+                                    <span class="l ">更新至4-1</span>
+                                                
+                <span class="l ml20">
+                                4105
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/397">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Python开发环境搭建" src="http://img.mukewang.com/555a8d4d000108bc06000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Python开发环境搭建</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">带你搭建 Python 开发环境</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                6302
+                                人学习</span>
+            </div>
+            <span class="time-label">15分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/395">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="iOS-动画进阶" src="http://img.mukewang.com/55594b500001c51406000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>iOS-动画进阶</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">iOS动画特效进阶篇</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                4046
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时13分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/313">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="Unity3D快速入门" src="http://img.mukewang.com/54c83c2c00010fd106000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>Unity3D快速入门</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">快速学会用Unity开发游戏</p>
+                                    <span class="l ">更新至3-10</span>
+                                                
+                <span class="l ml20">
+                                9503
+                                人学习</span>
+            </div>
+            <span class="time-label">4小时</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/382">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="C++远征之封装篇（上）" src="http://img.mukewang.com/553ef667000115b406000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>C++远征之封装篇（上）</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">封装--面向对象的基石。</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                6603
+                                人学习</span>
+            </div>
+            <span class="time-label">2小时18分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/393">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="How-old 刷脸神器" src="http://img.mukewang.com/5552a2f400017c5106000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>How-old 刷脸神器</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">通过第三方本课程教大家实现人脸识别</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                11552
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时19分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                        <li class="course-one">
+            <a href="/view/392">
+            <div class="course-list-img">
+                <img width="240" height="135" alt="iOS-动画入门" src="http://img.mukewang.com/555053df0001b54e06000338-240-135.jpg">
+                        </div>
+            <h5>
+                <span>iOS-动画入门</span>
+            </h5>
+            <div class="tips">
+                <p class="text-ellipsis">后IOS时代 扁平化设计，你值得拥有</p>
+                                    <span class="l">更新完毕</span>
+                                                
+                <span class="l ml20">
+                                7638
+                                人学习</span>
+            </div>
+            <span class="time-label">1小时57分钟</span>
+            <b class="follow-label">跟我学</b>
+            </a>
+        </li>
+                                           
+          
+        </ul>
+      
+    
+  </div>
+  <!--page-->
+  <div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active">1</a><a href="/course/list?page=2">2</a><a href="/course/list?page=3">3</a><a href="/course/list?page=4">4</a><a href="/course/list?page=5">5</a><a href="/course/list?page=6">6</a><a href="/course/list?page=7">7</a><a href="/course/list?page=2">下一页</a><a href="/course/list?page=17">尾页</a></div>
+    <!--page-->
+</div>
+</div>
+
+
+  <!--课程-->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+       <h2 class="col-md-12">轻课堂</h2>
+        <div class="col-md-6">         
+          <p>
+            轻课堂，UI学习教程网站<br/>
+            为您提供海量优质课程，以及创新的在线学习体验
+            帮助您获得全新的个人发展和能力提升
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="f-links text-right"><a href="/about/aboutus.htm#/about?aboutType=1" target="_blank">关于我们</a>- <a href="/about/aboutus.htm#/about?aboutType=2" target="_blank">联系我们</a>- <a href="/about/aboutus.htm#/about?aboutType=4" target="_blank">帮助中心</a>- <a href="/about/aboutus.htm#/about?aboutType=7" target="_blank">内容招募</a>- <a href="/about/aboutus.htm#/about?aboutType=8" target="_blank">意见反馈</a>- <a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a> </div>
+        </div>
+        <div class="copyright text-right">© 2015 学ui网</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+   
+    <script src="js/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

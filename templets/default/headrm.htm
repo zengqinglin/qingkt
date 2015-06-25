@@ -1,0 +1,29 @@
+<!--- Navigation -->
+<div class="nav-fix" >
+	<div class="nav-fix-box">
+		<div class="logo"><a href="{dede:global.cfg_indexurl/}"><img src="{dede:global.cfg_templets_skin/}/images/logo-rise.jpg" alt="润美设计公司"/></a></div>
+		
+		<div class="menu1"> 
+	        <ul id="navigation">
+            
+	         <li><a href="{dede:global.cfg_indexurl/}">首页</a></li>
+{dede:channelartlist   typeid='top'}
+	            <li>
+	                <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+	                <ul>
+                    {dede:channel type='son' noself='yes'}
+	                    <li><a href="[field:typelink/]">[field:typename/]</a></li>
+                         {/dede:channel}
+	                   
+                       
+	                </ul>
+	            </li>
+                {/dede:channelartlist}
+
+	        </ul>	        
+	    
+	    </div>
+			</div>
+	</div>
+
+<!---/Navigation -->

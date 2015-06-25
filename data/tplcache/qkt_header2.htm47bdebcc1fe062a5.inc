@@ -1,0 +1,44 @@
+<?php
+$z[0]=Array("global","",1719,1751);
+$z[0][4]['name']="cfg_templets_skin";
+$z[1]=Array("global","",1795,1827);
+$z[1][4]['name']="cfg_templets_skin";
+$z[2]=Array("global","",2464,2492);
+$z[2][4]['name']="cfg_memberurl";
+$z[3]=Array("php","\r\n        if(preg_match(\"#2#\", \$safe_gdopen))\r\n        {\r\n        echo '\r\n        <div class=\"form-group clearfix\" >\r\n       \r\n         <input type=\"text\" name=\"vdcode\" size=\"8\" class=\"ipt ipt-verify l\" placeholder=\"请输入验证码\" />\r\n           <a href=\"javascript:void(0)\" class=\"verify-img-wrap js-verify-refresh\"> <img id=\"vdimgck\" align=\"absmiddle\" onClick=\"this.src=this.src+\\'?\\'\" style=\"cursor:pointer;margin-left:0px;text-transform:uppercase;\" alt=\"看不清？点击更换\" src=\"'.\$cfg_cmspath.'/include/vdimgck.php\" width=\"100\"/>\r\n           </a><span class=\"verify-extra r\"> 看不清<br>\r\n         <a href=\"javascript:void(0)\"  onclick=\"changeAuthCode();\"  class=\"js-verify-refresh\">换一张</a> </span>\r\n            <p class=\"rlf-tip-wrap\"> <span style=\"display: none;\">请输入右侧图片内容</span> </p>\r\n         </div> \r\n        ';\r\n        }\r\n       \r\n        ",3281,4191);
+$z[4]=Array("global","",4689,4717);
+$z[4][4]['name']="cfg_memberurl";
+$z[5]=Array("global","",4944,4970);
+$z[5][4]['name']="cfg_cmspath";
+$z[6]=Array("type","\r\n            <li class=\"course-nav-item\">\r\n            \r\n              <a href=\"[field:typelink/]\">全部</a>\r\n            </li>\r\n             ",8039,8307);
+$z[6][4]['le']="1";
+$z[6][4]['currentstyle']="<li class='course-nav-item on'><a href='~typelink~'>~typename~</a> </li>";
+$z[7]=Array("channel","\r\n          \r\n             <li class=\"course-nav-item\">\r\n              <a href=\"[field:typelink/]\" data-ct=\"fe\">[field:typename/] </a>\r\n            </li>\r\n            ",8334,8653);
+$z[7][4]['le']="1";
+$z[7][4]['type']="self";
+$z[7][4]['typeid']="12";
+$z[7][4]['currentstyle']="<li class='course-nav-item on'><a href='~typelink~'>~typename~</a> </li>";
+$z[8]=Array("type","\r\n            <li class=\"course-nav-item\">\r\n            \r\n              <a href=\"[field:typelink/]\">全部</a>\r\n            </li>\r\n             ",8906,9169);
+$z[8][4]['le']="2";
+$z[8][4]['currentstyle']="<li class='course-nav-item on'><a href='~typelink~'>~typename~</a> </li>";
+$z[9]=Array("channel","\r\n          \r\n             <li class=\"course-nav-item\">\r\n              <a href=\"[field:typelink/]\" data-ct=\"fe\">[field:typename/] </a>\r\n            </li>\r\n            ",9184,9489);
+$z[9][4]['type']="self";
+$z[9][4]['le']="2";
+$z[9][4]['currentstyle']="<li class='course-nav-item on'><a href='~typelink~'>~typename~</a> </li>";
+$z[10]=Array("channelartlist","\r\n\r\n             {dede:sql sql='Select * from #@__arctype where reid=~id~ ORDER BY id limit 0,200'}\r\n             <li class=\"course-nav-item \">\r\n           \r\n        	<a href='[field:typedir function='str_replace(\"{cmspath}\",\"\",@me)'/]' target='_blank'>[field:typename/]</a>\r\n   \r\n            </li>\r\n           {/dede:sql}\r\n            \r\n",9503,9895);
+$z[10][4]['typeid']="12";
+$z[11]=Array("pagelist","",11568,11631);
+$z[11][4]['listitem']="pre,next,option,small";
+$z[11][4]['listsize']="2";
+$z[12]=Array("global","",12572,12597);
+$z[12][4]['name']="cfg_cmsurl";
+$z[13]=Array("global","",12690,12716);
+$z[13][4]['name']="cfg_cmspath";
+$z[14]=Array("global","",12773,12799);
+$z[14][4]['name']="cfg_cmspath";
+$z[15]=Array("global","",13071,13097);
+$z[15][4]['name']="cfg_cmspath";
+$z[16]=Array("global","",13339,13367);
+$z[16][4]['name']="cfg_mb_pwdmin";
+
+?>

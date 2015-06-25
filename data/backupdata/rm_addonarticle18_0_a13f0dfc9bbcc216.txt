@@ -1,0 +1,3 @@
+INSERT INTO `rm_addonarticle18` VALUES('5','5','','','','127.0.0.1','/uploads/141106/1-141106161245O6.jpg');
+INSERT INTO `rm_addonarticle18` VALUES('6','5','','','','127.0.0.1','/uploads/141106/1-14110616132V26.jpg');
+INSERT INTO `rm_addonarticle18` VALUES('7','5','','','','127.0.0.1','/uploads/141106/1-141106161415618.jpg');

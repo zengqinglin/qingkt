@@ -1,0 +1,2 @@
+{dede:link islocal='1' text='普清'} https%3a%2f%2fgithub.com%2fzengqinglin%2fqingkt%2fblob%2f368e2ed325bd539f275719b55c58daf39b30924e%2fAxureRP7.0%e4%bb%8e%e5%85%a5%e9%97%a8%e5%88%b0%e7%b2%be%e9%80%9a.mp4 {/dede:link}
+{dede:link text='标清'} https%3a%2f%2fgithub.com%2fzengqinglin%2fqingkt%2fblob%2f368e2ed325bd539f275719b55c58daf39b30924e%2fAxureRP7.0%e4%bb%8e%e5%85%a5%e9%97%a8%e5%88%b0%e7%b2%be%e9%80%9a.mp4 {/dede:link}

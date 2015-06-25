@@ -1,0 +1,214 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="refresh" content="5;url=<?php echo $cfg_cmspath; ?>">
+     
+      <title><?php echo $cfg_webname; ?>- 注册成功</title>
+
+     
+      <link href="../templets/default/css/bootstrap.css" rel="stylesheet">
+      <link href="../templets/default/css/style.css" rel="stylesheet">
+   
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+  <body>
+  
+<nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">轻课</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">轻课堂</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">课程</a></li>
+                      
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li>
+          <!--<div class="search-area">
+            <form action=""  id="search"  name="search-form" method="get">
+                <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+                <input type="button" class="btn_search js-btn-search">
+                
+            </form>
+        </div>-->
+            <!---登录-->
+          </li>
+           <ul id="_userlogin" class="nav navbar-nav navbar-right">
+           <div class="userinfo">
+
+			<div class="userface">
+			<a href="#" class="userName" style="border-radius:0; margin-top:0;"><?php echo $cfg_ml->M_UserName?></a>
+       
+    </div>
+    
+    <div id="user-block-pop">
+    
+    <div class="welcome">欢迎你<strong><?php echo $cfg_ml->M_UserName?></strong></div>
+    
+    
+    <div class="mylink">
+        <ul>
+         	<li><a href="mystow.php">我的收藏</a></li>
+          <!--  <li><a href="/member/guestbook_admin.php">我的留言</a></li>
+           
+            <li><a href="/member/article_add.php">发表文章</a></li>
+            <li><a href="/member/myfriend.php">好友管理</a></li>
+            <li><a href="/member/visit-history.php">访客记录</a></li>
+            <li><a href="/member/search.php">查找好友</a></li>-->
+        </ul>
+    </div>
+    <div class="uclink">
+    <a href="../member/index_do.php?fmdo=login&dopost=exit#">退出</a>
+   
+    <!--   <a href="/member/index.php">会员中心</a> | 
+        <a href="/member/edit_fullinfo.php">资料</a> | 
+        <a href="http://127.0.0.1/member/index.php?uid=mumu">空间</a> | 
+        -->
+    </div>
+    </div>
+</div><!-- /userinfo --></ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!--导航ed-->
+    
+    
+    
+    
+    <div class="base-info log" id="base-info">
+  <div class="container">
+  <div class="row">
+  	<div class="setting-left col-md-3">
+    <ul class="wrap-boxes list-group c-bg">
+    
+      <li class="nav-active">
+        <a href="reg-new.php" class="onactive">注册</a>
+      </li>
+      <li >
+        <a href="log.php">登陆</a>
+      </li>
+     <!-- <li>
+       <a href="edit_face.php">头像设置</a>
+       </li>-->
+    <!--  <li >
+        <a href="/user/setverifyemail">邮箱验证</a>
+      </li>-->
+      
+      <!--<li >
+        <a no-pjajx="" href="/user/setbindsns">绑定帐号</a>
+      </li>-->
+    </ul>
+    </div>
+    <!--left-->
+    <div class="col-md-9 setting-right c-bg">
+     <h4 class="edit-head">注册成功</h4>
+    	<div class="base-setting-wrap setting-base edit_fullinfo">
+      
+      <p class="success" style="margin-top: 25px;">注册成功!<?php echo $uname=empty($uname)? '' : '您的用户名：<font color="#ff6600">'.$uname.'</font>,';?>您已成为本站的正式会员!<br /><?php if($cfg_mb_spacesta=="-10") echo '<font color="#ff6600">由于系统开启了邮件审核机制，因此你的帐号需要审核后才能发信息!</font></br><a href='mail.php?dopost=sendmail'>点击进行验证</a><br />';?>
+  <font color="#ff6600"><span id="loadtime" style=" font-weight:bold">5</span></font>秒钟后自动转首页！<br />
+&nbsp;&nbsp;<a href="<?php echo $cfg_cmspath; ?>/">返回网站首页</a></p></div>
+        </div>
+    
+    </div>
+  <!---right-->
+  </div><!---row-->
+   
+
+    </div><!---container-->
+
+  </div><!---base-info-->
+ <script src="templets/js/j.js" language="javascript" type="text/javascript"></script>   
+<script src="templets/js/base.js" language="javascript" type="text/javascript"></script>
+
+<script src='templets/js/CheckPassStrength.js' type="text/javascript" language="javascript"></script>
+<script type="text/javascript" language="javascript" src='templets/js/reg_new.js'></script>
+<script type="text/javascript" language="javascript">
+<!--
+var reMethod = "<?php echo ($cfg_soft_lang == 'utf-8') ? 'POST' : 'GET';?>",pwdmin = <?php echo $cfg_mb_pwdmin; ?>;
+
+function changeAuthCode() {
+	
+	var num = 	new Date().getTime();
+	var rand = Math.round(Math.random() * 10000);
+	num = num + rand;
+	
+	$('#ver_code').css('visibility','visible');
+	if ($("#vdimgck")[0]) {
+		$("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+		
+	}
+	return false;	
+}
+
+function hideVc()
+{
+	$('#ver_code').css('visibility','hidden');
+}
+
+
+$(document).ready(function(){ 
+	$("#passwordLevel").removeClass().addClass("rank r0");
+	$("#vdcode").focus(function(){
+	  var leftpos = $("#vdcode").position().left;
+	  var toppos = $("#vdcode").position().top - 42;
+	  $('#ver_code').css('left', leftpos+'px');
+	  $('#ver_code').css('top', toppos+'px');
+	  $('#ver_code').css('visibility','visible');
+	});
+	$("input[type='password']").click(function(){
+	  hideVc()
+	});
+	$("#txtUsername").click(function(){
+	  hideVc()
+	});
+	$("input[type='radio']").focus(function(){
+	  hideVc()
+	});
+	/*
+	$("#vdcode").blur(function(){
+		  $('#ver_code').css('visibility','hidden');
+	});
+	*/
+})
+
+-->
+$(function(){
+	
+	$("#email").focus(function(){		
+
+		$("#_email").css("visibility","visible");
+		});
+	$("#txtPassword").focus(function(){
+		$("#passwordLevel").css("visibility","visible");
+		});
+	$("#userpwdok").focus(function(){
+		$("#_userpwdok").css("visibility","visible");
+		});
+	$("#txtUsername").focus(function(){
+		$("#_userid").css("visibility","visible");
+		});
+	})
+</script>
+
+ 
+   
+
+</body>
+</html>

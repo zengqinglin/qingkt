@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>webrx-title</title>
+<meta name="description" content="简介">
+<meta name="keywords" content="关键字">
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<style>
+*{ margin:0; padding:0;}
+body{ padding:50px;}
+div{ padding:50px; border:1px solid green; margin-left:25px; position:relative;}
+.bo{ border:5px solid yellow; width:300px; padding:20px; margin:50px;}
+p{}
+ul{ list-style:none;}
+.main{ height:30px; line-height:30px; width:90px; border:1px solid #eaeaea;}
+.sub{ background-color:#f0f0f0; border:1px solid #fa0;}
+.sub li{ height:25px; line-height:25px; width:90px; }
+.sub li:hover{ background-color:#fa0;}
+</style>
+<script src="../scripts/jquery-1.3.1.js"></script>
+<script>
+	$(function(){
+		/*$(".bo").click(function(){
+			alert("点我呀");
+			})*/
+	/*	$(".bo").bind("click",check);
+		function check(){
+			alert("有本是不让我出声啊！");
+			}
+		$(".stop").click(function(){
+			$(".bo").unbind("click",check);
+			})*/
+			/*$(".bo").hover(
+				function(){
+					console.log("我进来了！！！");
+					},
+				function(){
+					console.log("我出来了！！！");
+					}
+			)*/
+		/*	$(".bo").toggle(
+			function(){$(this).css("background-color","red")},
+			function(){$(this).css("background-color","blue")},
+			function(){$(this).css("background-color","yellow")})
+			$(".main").hover(
+			function(){
+				$(this).find(".sub").stop(true,false).slideDown();
+				},
+			function(){
+				$(this).find(".sub").stop(true,false).slideUp();
+				})*/
+				$(".sp").click(function(e){
+					alert("wo span被单击了");
+					e.stopPropagation();
+					})
+				$(".bo").click(function(){
+					$(this).animate({"width":"+=20","height":"+=20"},400);
+					
+				})
+			$(".mya").click(function(e){
+				$(".bo").trigger("click");
+				alert("hello wo 是 一个 a");
+				e.preventDefault();//阻止默认事件；
+				})
+			
+		})
+</script>
+</head>
+
+<body>
+	<input type="text" id="num" placeholder="请输入电话号码"/>
+    
+   <div> <p class="bo">我们来试一试toogleclass<span class="sp">我是里面的</span></p>
+   	<span class="stop">stop</span>
+    <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+    <ul><li class="main"><span>标题</span>
+    	<ul class="sub">
+        <li>二级1</li>
+         <li>二级2</li>
+          <li>二级3</li>
+        </ul>
+    </li></ul>
+   </div>
+   
+   <a href="http://www.baidu.com" target="_blank" class="mya">百度</a>
+   <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+</body>
+</html>

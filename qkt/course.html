@@ -1,0 +1,282 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <title>Bootstrap 101 Template</title>
+
+     
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <style>
+
+      </style>
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <style>
+
+ </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">轻课</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">轻课堂</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">课程</a></li>
+             <li><a href="#">计划</a></li>            
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li>
+          <div class="search-area">
+            <form action="" name="search-form" id="search"  method="get">
+                <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+                <input type="button" class="btn_search js-btn-search">
+                
+            </form>
+        </div>
+            <!---登录-->
+          </li>
+            <li><a href="/about/">登录</a></li>
+             <li><a href="/about/">注册</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!--导航ed-->
+  
+<!--课程-->
+<div class="course">
+  <div class="container">
+    <div class="position">  <a href="/course/list">课程</a> \ <a href="/course/list?c=fe">前端开发</a> \ <a href="/course/list?c=javascript">JavaScript</a> \ <span>JavaScript深入浅出</span>
+
+    </div> 
+    <div class="courseheaderbox c-bg clearfix">
+    <div class="course-img l">
+      <img src="images/course-demo.jpg" width="290"/>
+    </div>
+    <div class="coursetitle l">
+    <h2>高洛峰2015版 HTML5视频教程</h2>
+    <p>学习人数:<span>38931</span></p>
+    <p>课程时长:<span>2时30分</span></p>
+    <p>讲师：<span>曾庆林</span></p>
+
+    </div>
+<div class="courseinfo r">
+<h3>课程介绍</h3>
+<div class="course_decription">
+          这是一个帮助您系统学习JavaScript编程语言的课程，该课由浅入深的介绍JavaScript的语言特性，结合实际例子解析常见误区，启发你的思考，帮助学习者从入门到掌握，提升您的 JavaScript 技能。
+        </div>
+</div>
+</div>
+
+
+<!--coursemain-->
+<div class="coursemain clearfix">
+  <div class="course-content c-bg">
+    <nav class="course-tabs" >
+                    <ul id="tab_switch">
+
+                      <li tab="dirBrief" class="active">课程目录</li>
+                      <li tab="brief" class="c_jj curr">课程简介</li>
+                      <li tab="comment" id="comment" class="c_pj">
+                        课程评价 <i class="fn"></i>
+                      </li>
+                      
+                    </ul>
+  </nav>
+
+<div class="course_chapter_list">
+    <div class="learnchapter  learnchapter-active ">
+        <h3>
+            <span>-</span> <strong><i class="hasOpenOn"></i>
+                第1章 数据类型</strong> 
+        </h3>
+
+        <ul class="video">
+
+            <li> <em class="laststudy">最近学习</em> <a target="_blank" href="/video/5673" class="studyvideo"> 1-1 课程介绍 (01:27) <i class="doStudy"></i> </a> </li>
+            <li> <a target="_blank" href="/video/5674" class="studyvideo"> 1-2 六种数据类型 (02:58) <i></i> </a> </li>
+            <li> <a target="_blank" href="/video/5675" class="studyvideo"> 1-3 隐式转换 (04:47) <i></i> </a> </li>
+            <li> <a target="_blank" href="/video/5676" class="studyvideo"> 1-4 包装对象 (04:03) <i></i> </a> </li>
+            <li> <a target="_blank" href="/video/5677" class="studyvideo"> 1-5 类型检测 (09:44) <i></i> </a> </li>
+            <li> <a target="_blank" href="/code/5760" class="programme"> 1-6 编程练习 <i></i> </a> </li> </ul>
+    </div>
+    <div class="learnchapter  learnchapter-active ">
+        <h3> <span>-</span> <strong><i class="hasOpenOn"></i> 第2章 表达式和运算符</strong> </h3>
+        <ul class="video">
+
+            <li> <a target="_blank" href="/video/5801" class="studyvideo"> 2-1 表达式 (04:14) <i></i> </a> </li>
+            <li> <a target="_blank" href="/video/5804" class="studyvideo"> 2-2 运算符 (08:45) <i class="doStudy"></i> </a> </li> </ul>
+    </div>
+   
+</div>
+ <div class="coment">
+ 	<div id="course_note">
+        <ul class="commentcon">
+              <li>
+        <div class="notelist_headpic">
+        <a href="/space/u/uid/2008653" target="_blank"><img src="http://img.mukewang.com/user/5333a1a90001c8d802000200-40-40.jpg" width="40" height="40"></a>
+        </div>
+        <div class="notelist_content">
+          <div class="u_name">
+            <a href="/space/u/uid/2008653" target="_blank">ying_vincent</a>
+          </div>
+          <p>讲这么难，实际有什么用。。还不是用那些最简单的功能</p>
+          <div class="notelist-bottom clearfix">
+            <span title="创建时间" class="l timeago">时间：6小时前</span>
+                        
+                        <div class="notelist-actions">
+              <a title="赞" href="javascript:;" class="js-pl-praise list-praise " data-id="58199">
+                <span class="icon icon_good "></span>
+                <em>0</em></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      </ul>
+      </div>
+      <!--page-->
+      	<div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active">1</a><a href="/course/list?page=2">2</a><a href="/course/list?page=3">3</a><a href="/course/list?page=4">4</a><a href="/course/list?page=5">5</a><a href="/course/list?page=6">6</a><a href="/course/list?page=7">7</a><a href="/course/list?page=2">下一页</a><a href="/course/list?page=17">尾页</a></div>
+	<!--page-->
+ </div>
+    <div class="">3</div>
+  <!--课程列表-->
+
+  </div>
+  <!--coursemain-->
+  <div class="sidebar ">
+    <div class="teacher-block c-bg">
+      <h3>授课老师</h3>
+
+      <p class="t-name"><a href="#" class="t-pic"><img src="images/teacher.jpg" width="80"></a><a href="#">曾庆林</a></p>
+      <div class="t-discrip">花名霍雍，阿里技术专家。幽默风趣的外表下，有一颗对技术坚持不懈追求的心。才子一枚，写歌、健身、游泳，十八般武艺样样精通。</div>
+    </div>
+
+       <div class="teacher-block c-bg">
+      <h3>相关课程</h3>
+      <ul>
+<li class="clearfix course-list-relation">
+        <a href="/view/333?src=sugc" class="course-cover"><img src="http://img.mukewang.com/5502bbdd0001a8a606000338.jpg" width="108" height="60" border="0">
+        <span class="course-name">快乐的sublime编辑器</span></a>
+      </li>
+    <li class="clearfix course-list-relation">
+        <a href="/view/333?src=sugc" class="course-cover"><img src="http://img.mukewang.com/5502bbdd0001a8a606000338.jpg" width="108" height="60" border="0">
+        <span class="course-name">快乐的sublime编辑器</span></a>
+      </li>
+    <li class="clearfix course-list-relation">
+        <a href="/view/333?src=sugc" class="course-cover"><img src="http://img.mukewang.com/5502bbdd0001a8a606000338.jpg" width="108" height="60" border="0">
+        <span class="course-name">快乐的sublime编辑器</span></a>
+      </li>
+     </ul>     
+    </div>
+
+     <div class="teacher-block  c-bg">
+      <h3>资料下载</h3>
+      <ul class="downlist">
+                <li>
+          <span><i class="icon icon-folder"></i>表达式和运算符(ppt)</span>
+          <a href="http://img.mukewang.com/down/54c59e370001148c00000000.zip" class="downcode" target="_blank" download="" data-id="424" title="表达式和运算符(ppt)">下载</a>
+        </li>
+                <li>
+          <span><i class="icon icon-folder"></i>数据类型PPT</span>
+          <a href="http://img.mukewang.com/down/54ace72f000105da00000000.zip" class="downcode" target="_blank" download="" data-id="397" title="数据类型PPT">下载</a>
+        </li>
+                <li>
+          <span><i class="icon icon-folder"></i>语句(ppt)</span>
+          <a href="http://img.mukewang.com/down/54c59f8f00019c0b00000000.zip" class="downcode" target="_blank" download="" data-id="425" title="语句(ppt)">下载</a>
+        </li>
+                <li>
+          <span><i class="icon icon-folder"></i>JS对象(ppt)</span>
+          <a href="http://img.mukewang.com/down/54c5ec1a000141f100000000.zip" class="downcode" target="_blank" download="" data-id="426" title="JS对象(ppt)">下载</a>
+        </li>
+                <li>
+          <span><i class="icon icon-folder"></i>JS数组(PPT)</span>
+          <a href="http://img.mukewang.com/down/54fd047300011c1d00000000.zip" class="downcode" target="_blank" download="" data-id="453" title="JS数组(PPT)">下载</a>
+        </li>
+                <li>
+          <span><i class="icon icon-folder"></i>JS函数与作用域（PPT）</span>
+          <a href="http://img.mukewang.com/down/54fd04c50001adbc00000000.zip" class="downcode" target="_blank" download="" data-id="454" title="JS函数与作用域（PPT）">下载</a>
+        </li>
+            </ul> 
+    </div>
+
+
+
+
+
+  </div>
+
+ 
+  </div>
+</div>
+
+    </div>
+</div>
+<!--课程-->
+
+
+  <!--课程-->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+       <h2 class="col-md-12">轻课堂</h2>
+        <div class="col-md-6">         
+          <p>
+            轻课堂，UI学习教程网站<br/>
+            为您提供海量优质课程，以及创新的在线学习体验
+            帮助您获得全新的个人发展和能力提升
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="f-links text-right"><a href="/about/aboutus.htm#/about?aboutType=1" target="_blank">关于我们</a>- <a href="/about/aboutus.htm#/about?aboutType=2" target="_blank">联系我们</a>- <a href="/about/aboutus.htm#/about?aboutType=4" target="_blank">帮助中心</a>- <a href="/about/aboutus.htm#/about?aboutType=7" target="_blank">内容招募</a>- <a href="/about/aboutus.htm#/about?aboutType=8" target="_blank">意见反馈</a>- <a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a> </div>
+        </div>
+        <div class="copyright text-right">© 2015 学ui网</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+   
+    <script src="js/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+		$("#tab_switch>li").each(function(index, element) {
+            var i=index;
+			$(this).click(function(){
+				$("#tab_switch .active").removeClass("active");
+				$(this).addClass("active");
+				$(".course-content>div:visible").hide();
+				$(".course-content>div:eq("+i+")").show();
+				})
+        });
+	$(".learnchapter>h3").click(function(){
+		$(this).next(".video").slideToggle();
+		if($(this).find("span").html()=="+"){
+		$(this).find("span").html("-");
+		}else{
+			$(this).find("span").html("+");
+			}
+		})
+		})
+    </script>
+  </body>
+</html>

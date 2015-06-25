@@ -1,0 +1,800 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <title>Bootstrap 101 Template</title>
+
+     <link href="/templets/default/css/bootstrap.css" rel="stylesheet">
+<link href="/templets/default/css/style.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+      <style>
+
+      </style>
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <style>
+
+ </style>
+  </head>
+  <body>
+   
+<!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">轻课</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#">轻课堂</a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">课程</a></li>
+        <li><a href="#">计划</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-sm">
+        <li>
+          <div class="search-area">
+            <form id="search" action="" name="search-form" method="get">
+              <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+              <input type="button" class="btn_search js-btn-search">
+            </form>
+          </div>
+          <!---登录--> 
+        </li>
+      	<ul id="_userlogin" class="nav navbar-nav navbar-right" >
+        <li><a href=""   data-toggle="modal" data-target=".signin">登录</a></li>
+        <li><a href="" class="link-register"  data-toggle="modal" data-target=".signin">注册</a></li>
+        </ul>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</nav>
+<script src="/templets/default/js/jquery.min.js"></script> 
+<script src="/templets/default/js/bootstrap.min.js"></script> 
+<!--模块-->
+
+<div class="modal fade signin " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel"> <span class="active-title">登录</span> <span>注册</span> </h4>
+      </div>
+      <div class="modal-body">
+        <div class="singIn">
+          <form class="logIn"  action="/member/index_do.php" method="POST">
+          <input type="hidden" name="fmdo" value="login">
+        <input type="hidden" name="dopost" value="login">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="sr-only">用户名：</label>
+              
+              <input type="text" class="form-control ipt ipt-emall" id="exampleInputEmail1" name="userid" size="20"  placeholder="请输入邮箱">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="sr-only">密码：</label>
+              <input type="password" class="form-control ipt ipt-pwd" id="exampleInputPassword1"   name="pwd" size="20" placeholder="请输入密码">
+            </div>
+             
+          
+            
+        <div class="form-group clearfix" >
+       
+         <input type="text" name="vdcode" size="8" class="ipt ipt-verify l" placeholder="请输入验证码" />
+           <a href="javascript:void(0)" class="verify-img-wrap js-verify-refresh"> <img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor:pointer;margin-left:0px;text-transform:uppercase;" alt="看不清？点击更换" src="/include/vdimgck.php" width="100"/>
+           </a><span class="verify-extra r"> 看不清<br>
+         <a href="javascript:void(0)"  onclick="changeAuthCode();"  class="js-verify-refresh">换一张</a> </span>
+            <p class="rlf-tip-wrap"> <span style="display: none;">请输入右侧图片内容</span> </p>
+         </div> 
+        
+            
+            <div class="form-group clearfix">
+            
+            <button type="submit" class="btn btn-block bg-yellow yellow">提交</button>
+            </div>
+             <div class="form-group clearfix">
+              <label for="auto-signin" class="l" hidefocus="true">
+              
+                <input type="checkbox" checked="checked"  value="2592000" name="keeptime" id="ra1">
+                自动登录</label>
+               
+              <a href="/member/resetpassword.php" class="r" target="_blank" hidefocus="true">忘记密码 </a> </div>
+            
+          </form>
+        </div>
+        <div class="singUp" style="display:none;">
+        <form class="logIn"  action="/member/reg_new.php"  id="regUser" name="form2">
+          <input type="hidden" value="regbase" name="dopost"/>
+          <input type="hidden" value="1" name="step"/>
+          <input type="hidden" value="个人" name="mtype"/>
+          
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="sr-only">用户名：</label>
+            <input type="text" class="form-control ipt ipt-emall" id="email" name="email" placeholder="请输入邮箱"/>
+            <em id="_email">(每个电子邮邮箱只能注册一个帐号)</em> 
+            </div>
+          
+            <input type="hidden" class="intxt w200" size="20" id="uname" name="uname"/>
+           
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="sr-only">密码：</label>
+            <input type="password" onkeyup="setPasswordLevel(this, document.getElementById('passwordLevel'));" class="form-control ipt ipt-pwd" id="txtPassword"  name="userpwd" placeholder="请输入密码">
+            <input id="passwordLevel" class="rank r2" disabled="disabled" name="Input"/>
+          </div>
+          <div class="form-group">
+            <input type="password" id="userpwdok" name="userpwdok"  size="20" class="form-control ipt ipt-pwd" placeholder="请再次输入密码">
+            <em id="_userpwdok"><font color="red"><b>×两次输入密码不一致</b></font></em> </div>
+          <div class="form-group">
+            <input type="text" name="userid" id="txtUsername" class=" form-control ipt ipt-nick" placeholder="请输入用户昵称">
+            <em id="_userid">(可以使用中文，但禁止除[@][.]以外的特殊符号)</em> </div>
+          <?php }?>
+          <div class="form-group">
+            <input type="text" name="vdcode"id="vdcode"   style="text-transform: uppercase;" class="ipt ipt-verify l" placeholder="请输入验证码">
+            <a href="javascript:void(0)" onclick="changeAuthCode();" class="verify-img-wrap js-verify-refresh"><img class="verify-img" onclick="this.src=this.src+'?'" src="../include/vdimgck.php"  alt="看不清？点击更换" id="vdimgck"></a> <span class="verify-extra r"> 看不清<br>
+            <a href="javascript:void(0)"  onclick="changeAuthCode();"  class="js-verify-refresh">换一张</a> </span>
+            <p class="rlf-tip-wrap"> <span style="display: none;">请输入右侧图片内容</span> </p>
+          </div>
+          <?php }?>
+          <button type="submit" class="btn btn-block bg-yellow yellow" id="btnSignCheck">注册</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer"> </div>
+  </div>
+  <!-- /.modal-content --> 
+</div>
+</div>
+<script>
+  $(function(){
+	  $(".signin h4 span").each(function(index,value){
+		var i=index;
+		$(this).click(function(){
+			$(".active-title").removeClass("active-title");
+			$(this).addClass("active-title");
+			$(".signin .modal-body>div").hide();
+			$(".signin .modal-body>div:eq("+i+")").show();
+			})  
+		  
+	  })
+	  $(".link-register").click(function(){
+		
+		$(".active-title").removeClass("active-title");
+			$(".signin h4 span:eq(1)").addClass("active-title");
+			$(".signin .modal-body>div").hide();
+			$(".signin .modal-body>div:eq("+1+")").show(); 
+		  })
+	  
+	  })
+	  
+	 
+	 
+  </script> 
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script> 
+<script type="text/javascript" language="javascript" src='/member/templets/js/reg_new.js'></script> 
+<script src='/member/templets/js/CheckPassStrength.js' type="text/javascript" language="javascript"></script>
+
+<script>
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+</script>
+
+  <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<script type="text/javascript" language="javascript">
+
+
+var reMethod ='GET';
+var pwdmin =3;
+function changeAuthCode() {
+	var num = 	new Date().getTime();
+	var rand = Math.round(Math.random() * 10000);
+	num = num + rand;
+	$('#ver_code').css('visibility','visible');
+	if ($("#vdimgck")[0]) {
+		$("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+	}
+	return false;	
+}
+
+function hideVc()
+{
+	$('#ver_code').css('visibility','hidden');
+}
+
+
+$(document).ready(function(){ 
+	$("#passwordLevel").removeClass().addClass("rank r0");
+	$("#vdcode").focus(function(){
+	  var leftpos = $("#vdcode").position().left;
+	  var toppos = $("#vdcode").position().top - 42;
+	  $('#ver_code').css('left', leftpos+'px');
+	  $('#ver_code').css('top', toppos+'px');
+	  $('#ver_code').css('visibility','visible');
+	});
+	$("input[type='password']").click(function(){
+	  hideVc()
+	});
+	$("#txtUsername").click(function(){
+	  hideVc()
+	});
+	$("input[type='radio']").focus(function(){
+	  hideVc()
+	});
+	/*
+	$("#vdcode").blur(function(){
+		  $('#ver_code').css('visibility','hidden');
+	});
+	*/
+})
+
+
+</script>
+
+
+    <!--导航ed-->
+  
+<!--video-->
+<div class="video-wrap clearfix">
+ <aside class="left_side" style="left: 0px;">
+   <a href="javascript:;" class="btn_slide btn_left_slide"></a>
+   <div class="l_title">课程目录</div>
+   <div class="l_zy_list nano has-scrollbar" id="divClassList" style="height: 456px;">
+     <div class="nano-content" tabindex="0" style="right: -17px;">
+     
+     
+     
+   
+</div>
+ <div class="coment">
+ 	<div id="course_note">
+        <ul class="commentcon">
+         <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1" style="margin-top:35px;">
+  <dl class="tbox">
+    <dt><!-- <strong>发表评论</strong> <span class="more"></span>--> </dt>
+    <dd>
+      <div class="dede_comment_post">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="128" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+        
+          <!-- /dcmp-title -->
+          <div class="dcmp-stand" style="color:#999; margin:15px 0 "> <strong>评价:</strong>
+            <input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" />
+            <label for="dcmp-stand-neu"><img src="/templets/default/images/cmt-neu.gif" />中立</label>
+            <input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" />
+            <label for="dcmp-stand-good"><img src="/templets/default/images/cmt-good.gif" />好评</label>
+            <input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" />
+            <label for="dcmp-stand-bad"><img src="/templets/default/images/cmt-bad.gif" />差评</label>
+          </div>
+          <!-- /dcmp-stand -->
+          <div class="clr"></div>
+          <div class="dcmp-content">
+            <script type="text/javascript">
+					//<![CDATA[
+					window.CKEDITOR_BASEPATH='/include/ckeditor/';
+					//]]>
+                    </script>
+            <script type="text/javascript" src="/include/ckeditor/ckeditor.js?t=B8DJ5M3"></script>
+            <script type="text/javascript">//<![CDATA[
+CKEDITOR.config.ubb_smiley = {"高兴":"{s:1}","撇嘴":"{s:2}","抓狂":"{s:3}","汗":"{s:4}","惊恐":"{s:5}","奋斗":"{s:6}","疑问":"{s:7}","晕":"{s:8}","偷笑":"{s:9}","可爱":"{s:10}","疑惑":"{s:11}","酷":"{s:12}","暴汗":"{s:13}","呕吐":"{s:14}","大笑":"{s:15}","色":"{s:16}"}
+//]]></script>
+<textarea name="msg" rows="8" cols="60"></textarea>
+<script type="text/javascript">//<![CDATA[
+CKEDITOR.replace('msg', {"extraPlugins":"dedepage,multipic,addon,bbcode","fontSize_sizes":"30\/30%;50\/50%;100\/100%;120\/120%;150\/150%;200\/200%;300\/300%","disableObjectResizing":"true","smiley_path":"\/images\/smiley\/","smiley_images":["1.gif","2.gif","3.gif","4.gif","5.gif","6.gif","7.gif","8.gif","9.gif","10.gif","11.gif","12.gif","13.gif","14.gif","15.gif","16.gif"],"smiley_descriptions":["高兴","撇嘴","抓狂","汗","惊恐","奋斗","疑问","晕","偷笑","可爱","疑惑","酷","暴汗","呕吐","大笑","色"],"toolbar":[["Source","-","Bold","Italic","Underline","-"],["FontSize","TextColor"],["Link","Unlink","Smiley"]],"height":100,"skin":"kama"});
+//]]></script>
+ </div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post clearfix">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" style=" text-align:right; margin:25px 0;" id="_ajax_feedback"> 
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <div style="display:none">
+              <input type="checkbox" name="notuser" id="dcmp-submit-guest" type="hidden" />
+              </div>
+            <!--<label for="dcmp-submit-guest" />
+              匿名?
+              </label>-->
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin();</script>
+            
+            <div class="dcmp-submit" style="float:right;">
+              <button type="button" onClick='PostComment()' class="yellow" style="border:none; width:160px; height:45px; line-height:45px;">发表评论</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </dd>
+  </dl>
+</div>
+<!-- //评论表单区结束 -->
+<!-- //评论内容区 -->
+<a name='commettop'></a>
+<div class="mt1" style="clear:both; border-top:1px solid #eaeaea; margin-top:25px;">
+  <dl class="tbox">
+    <!--<dt> <strong>最新评论</strong> <span class="more"><a href="/plus/feedback.php?aid=128">进入详细评论页&gt;&gt;</a></span> </dt>-->
+    <!-- //这两个ID的区块必须存在，否则JS会出错 -->
+    <dd id='commetcontentNew'></dd>
+    <dd id='commetcontent' ></dd>
+  </dl>
+</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=128&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = CKEDITOR.instances.msg.getData();
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '128');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'utf-8';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '128');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+ 
+             
+      </ul>
+      </div>
+      <!--page-->
+      <!--	<div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active">1</a><a href="/course/list?page=2">2</a><a href="/course/list?page=3">3</a><a href="/course/list?page=4">4</a><a href="/course/list?page=5">5</a><a href="/course/list?page=6">6</a><a href="/course/list?page=7">7</a><a href="/course/list?page=2">下一页</a><a href="/course/list?page=17">尾页</a></div>-->
+	<!--page-->
+ </div>
+</div>
+
+  <!--课程列表-->
+
+  </div>
+  <!--coursemain-->
+  <div class="sidebar ">
+  <div class="teacher-block c-bg">
+      <h3>授课老师</h3>
+
+      <p class="t-name"><a href="#" class="t-pic"><img src="/member/templets/images/dfboy.png" width="80"></a><a href="#">admin</a></p>
+      <div class="t-discrip"></div>
+    </div><!--blocked-->
+    <div class="teacher-block  c-bg">
+      <h3>资料下载</h3>
+      <ul class="downlist">
+                <li>
+          <span><i class="icon icon-folder"></i>下载资料</span>
+          
+        </li>
+                
+            </ul> 
+    </div><!--bocked--->
+   
+     <div class="teacher-block c-bg">
+      <h3>相关课程</h3>
+      <ul>
+      
+        
+     </ul>     
+    </div><!--bocked--->
+
+     
+
+    
+    
+  </div><!---siderbar ed--->
+</div>
+
+    </div>
+</div>
+<!--课程-->
+
+
+  <!--课程-->
+    <div id="footer">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-md-12">轻课堂</h2>
+      <div class="col-md-6">
+        <p> 轻课堂，UI学习教程网站<br/>
+          为您提供海量优质课程，以及创新的在线学习体验
+          帮助您获得全新的个人发展和能力提升 </p>
+      </div>
+      <div class="col-md-6">
+        <div class="f-links text-right"><a href="/about/aboutus.htm#/about?aboutType=1" target="_blank">关于我们</a>- <a href="/about/aboutus.htm#/about?aboutType=2" target="_blank">联系我们</a>- <a href="/about/aboutus.htm#/about?aboutType=4" target="_blank">帮助中心</a>- <a href="/about/aboutus.htm#/about?aboutType=7" target="_blank">内容招募</a>- <a href="/about/aboutus.htm#/about?aboutType=8" target="_blank">意见反馈</a>- <a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a> </div>
+      </div>
+      <div class="copyright text-right">© 2015 学ui网</div>
+    </div>
+  </div>
+</div>
+
+   
+  <script src="/templets/default/js/jquery.min.js"></script> 
+<script src="/templets/default/js/bootstrap.min.js"></script>
+    <script>
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+
+	$(".course-content>div:gt(0)").hide();
+	
+    $(function(){
+		$("#tab_switch>li").each(function(index, element) {
+            var i=index;
+			$(this).click(function(){
+				$("#tab_switch .active").removeClass("active");
+				$(this).addClass("active");
+				$(".course-content>div:visible").hide();
+				$(".course-content>div:eq("+i+")").show();
+				})
+        });
+	$(".learnchapter>h3").click(function(){
+		$(this).next(".video").slideToggle();
+		if($(this).find("span").html()=="+"){
+		$(this).find("span").html("-");
+		}else{
+			$(this).find("span").html("+");
+			}
+		})
+		})
+    </script>
+     <script src="/templets/default/js/jwplayer.js"></script>
+      <script src="/templets/default/js//jwplayer.html5.js"></script>
+
+   
+<script>  
+    var thePlayer;  //保存当前播放器以便操作  
+    $(function() {  
+       thePlayer = jwplayer('video-box').setup({
+            width:1200,
+            height:530,
+            videoTitile: "mumu",
+      primary: "flash",
+            autostart:true,
+            startparam: "start",
+            autochange:true,
+            playlist: [{
+                //image: "JW.jpg",
+                sources: [{
+                   file: 'http://v1.mukewang.com/671ea137-42d0-4eeb-ad23-bdbd261e6ee4/H.mp4',
+           // file: "http://10.96.141.77/e1df8c31-3ab8-4efb-9d48-e5134a59dcca/Y_dest_1.mp4",
+                    label: "普清",
+                    "default": true
+                },{
+                    file: 'http://v1.mukewang.com/671ea137-42d0-4eeb-ad23-bdbd261e6ee4/H.mp4',
+                    label: "高清"
+                },{
+                    file: 'http://v1.mukewang.com/671ea137-42d0-4eeb-ad23-bdbd261e6ee4/L.mp4',
+                    label: "超清"
+                }]
+            }],
+
+            events: {
+                onReady: function() {//
+                    // if(OP_CONFIG.userInfo){
+                    //     thePlayer.seek(continueTime);
+                    // }
+                },
+                onComplete: function(){
+                
+                    $('#J_NextBox').removeClass('hide');
+                  //  sentLearnTime();
+                },
+            onBuffer:function(callback){//缓冲状态，缓冲图标显示
+
+          // playserWaitTime=new Date().getTime();
+          //  if(bufferType==1){
+          //   playerOldHd=thePlayer.getCurrentQuality();
+          //  };
+          // key=radKey(10)+playserWaitTime;
+          //sendVideoTestData(2,0,"",playserWaitTime,0);
+
+        },
+        onPlay:function(callback){//开始播放－缓冲结束
+
+          // if(callback.oldstate=="PAUSED" ){
+          //   return;
+          // }
+          // var bufferTme=new Date().getTime()-playserWaitTime;
+          // //sendVideoTestData(1,bufferTme,"",new Date().getTime(),1);
+
+        },
+         onQualityChange :function(callback){
+          //console.log("onQualichange-----");
+        },
+
+        onError:function (callback){
+          // loadVideo(callback.message)
+        }
+            }
+        })
+       
+var tflag=true;
+$(".btn_left_slide").click(function(){
+if(tflag){
+$(".left_side").animate({"left":"-=300"},200);
+$(".video-wrap").animate({"padding-left":"20"},200);
+tflag=false;
+}else{
+
+ $(".left_side").animate({"left":"+=300"},200); 
+ $(".video-wrap").animate({"padding-left":"300"},200);
+
+ tflag=true;  
+}
+
+})
+
+
+  
+
+
+
+// $(".btn_left_slide").toggle(
+
+// 	function(){
+// 		$(".left_side").animate({"left":"+=300"},1500);
+// 		},
+// 	function(){
+// 		$(".left_side").animate({"left":"-=300"},1500);
+// 		}
+// 	)
+	      
+   
+	
+	
+	 
+	  
+    });  
+</script>  
+  
+  </body>
+</html>

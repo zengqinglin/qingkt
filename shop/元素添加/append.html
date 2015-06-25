@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{ padding:0; padding:0;}
+body{ padding:50px;}
+ul,ol{ list-style:none;}
+h3,div,ul,li,ol{ margin:0; padding:0;}
+.global_module h3{ height:35px; line-height:35px; text-align:center; background-color:#369; color:#f6f6f6;}
+.news ul li{ height:30px; line-height:30px; color:#666; border-bottom:1px dashed #d0d0d0; padding-left:15px; }
+.news{ width:220px; border:1px solid #069;}
+.news .scrollNews{ height:150px; overflow:hidden;}
+#tooltip{ position:absolute; background-color:#F90; padding:5px;}
+#papa{ border:1px solid #AA7D1C; padding:50px; width:300px; height:300px;}
+#youp{ background-color:#FFF500;}
+.bigp{ border:1px solid red; padding:50px;}
+ul *{ padding:25px; border:1px solid green;}
+div{ border:5px solid red;}
+p{ border:5px solid green;}
+</style>
+<script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+		//$("#papa").prepend($("#youp"));
+		//$("#youp").appendTo("#papa");
+	/*	var str=$("#papa").html();
+		var pr=$(".pp").html();
+		$("#papa").html(str+pr);*/
+		//$("#papa").after($("h1"));
+		//$("#papa").before($("h1"));
+		//$(this).next().remove();
+	/*	$(this).next().empty();
+		})
+	$("#btn").click(function(){
+		var obj=$(this).clone(true);
+		$(this).after(obj);
+		*/
+		//$("p").wrap("<div class='bigp'></div>")
+		//$("p").wrapAll("<div class='bigp'></div>")
+		$("#inin").click(function(){
+			$("div").replaceAll($("#xiaop"));
+			})
+	
+		
+	})
+
+</script>
+</head>
+
+<body>
+<input type="button" value="复制" id="btn"/>
+<div id="papa"> 我是div元素里面的</div>
+
+<div>div</div>
+
+<ul><li><a><span><span id="inin">我是在里面</span></span></a></li></ul>
+<div>div</div>
+<p id="xiaop">my xiao p</p>
+</body>
+</html>

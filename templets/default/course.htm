@@ -1,0 +1,260 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+   <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+
+     
+     <link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel="stylesheet">
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+     
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <style>
+
+ </style>
+  </head>
+  <body>
+   {dede:include filename="qkt_header.htm"/}
+  
+<!--课程-->
+<div class="course">
+  <div class="container">
+    <div class="position">  {dede:field name='position'/}
+
+    </div> 
+    <div class="courseheaderbox c-bg clearfix">
+    <div class="course-img l">
+      <img src="{dede:field name='litpic'/}" width="290"/>
+    </div>
+    <div class="coursetitle l">
+    <h2>{dede:field name="title"/}</h2>
+    <p>学习人数:<span>{dede:field name="click"/}</span></p>
+    <p>课程时长:<span>{dede:field name="softsize"/}</span></p>
+    <p><a href="{dede:field name='phpurl'/}/stow.php?aid={dede:field.id/}" target="_blank">收藏</a></p>
+   <!-- <p>讲师：<span>{dede:field name="teacher"/}</span></p>-->
+
+    </div>
+<div class="courseinfo r">
+<h3>课程介绍</h3>
+<div class="course_decription">
+         {dede:field.introduce/}
+        </div>
+</div>
+</div>
+
+
+<!--coursemain-->
+<div class="coursemain clearfix">
+  <div class="course-content c-bg">
+    <nav class="course-tabs" >
+                    <ul id="tab_switch">
+
+                      <li tab="dirBrief" class="active">课程目录</li>
+                      <li tab="brief" class="c_jj curr">评论</li>
+                      <!--<li tab="comment" id="comment" class="c_pj">
+                        课程评价 <i class="fn"></i>
+                      </li>-->
+                      
+                    </ul>
+  </nav>
+
+<div class="course_chapter_list">
+
+
+    {dede:channelartlist  cl='1'  }
+    <div class="learnchapter  learnchapter-active ">
+        <h3> <span>-</span> <strong><i class="hasOpenOn"></i> {dede:field name='typename'/}</strong> </h3>
+        
+        <ul class="video">
+			 {dede:arclist titlelen='42' row='10'} 
+            <li> <a target="_blank" href="[field:arcurl/]" class="studyvideo"> [field:title /] <i></i> </a> </li>
+            {/dede:arclist}
+          </ul>
+    </div>
+    {/dede:channelartlist}
+   
+</div>
+ <div class="coment">
+ 	<div id="course_note">
+        <ul class="commentcon">
+         {dede:include file='ajaxfeedback2.htm' /} 
+             
+      </ul>
+      </div>
+      <!--page-->
+      <!--	<div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active">1</a><a href="/course/list?page=2">2</a><a href="/course/list?page=3">3</a><a href="/course/list?page=4">4</a><a href="/course/list?page=5">5</a><a href="/course/list?page=6">6</a><a href="/course/list?page=7">7</a><a href="/course/list?page=2">下一页</a><a href="/course/list?page=17">尾页</a></div>-->
+	<!--page-->
+ </div>
+   
+  <!--课程列表-->
+
+  </div>
+  <!--coursemain-->
+  <div class="sidebar ">
+  {dede:memberinfos }
+    <div class="teacher-block c-bg">
+      <h3>授课老师</h3>
+
+      <p class="t-name"><a href="#" class="t-pic"><img src="[field:face/]" width="80"></a><a href="#">[field:uname/]</a></p>
+      <div class="t-discrip">[field:lovemsg/]</div>
+    </div><!--blocked-->
+     {/dede:memberinfos}
+    <div class="teacher-block  c-bg">
+      <h3>资料下载</h3>
+      <ul class="downlist">
+                <li>
+          <span><i class="icon icon-folder"></i>下载资料</span>
+          {dede:field name='softlinks'/}
+        </li>
+                
+            </ul> 
+    </div><!--bocked--->
+   
+     <div class="teacher-block c-bg">
+      <h3>相关课程</h3>
+      <ul>
+      
+      {dede:arclist flag='c' titlelen=42 row=6}  
+      
+<li class="clearfix course-list-relation">
+        <a href="[field:arcurl/]" class="course-cover"><img src="[field:litpic/]" width="108" height="60" border="0">
+        <span class="course-name">[field:title/]</span></a>
+      </li> 
+      {/dede:arclist}  
+     </ul>     
+    </div><!--bocked--->
+
+     
+
+    
+    
+  </div>
+</div>
+
+    </div>
+</div>
+<!--课程-->
+
+
+  <!--课程-->
+   {dede:include filename="qkt_footer.htm"/}
+
+
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script> 
+<script src="{dede:global.cfg_templets_skin/}/js/bootstrap.min.js"></script>
+    <script>
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+
+	$(".course-content>div:gt(0)").hide();
+	
+    $(function(){
+		$("#tab_switch>li").each(function(index, element) {
+            var i=index;
+			$(this).click(function(){
+				$("#tab_switch .active").removeClass("active");
+				$(this).addClass("active");
+				$(".course-content>div:visible").hide();
+				$(".course-content>div:eq("+i+")").show();
+				})
+        });
+	$(".learnchapter>h3").click(function(){
+		$(this).next(".video").slideToggle();
+		if($(this).find("span").html()=="+"){
+		$(this).find("span").html("-");
+		}else{
+			$(this).find("span").html("+");
+			}
+		})
+		})
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+<li class="ab_list"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></li>

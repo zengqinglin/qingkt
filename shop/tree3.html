@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ padding:0; padding:0;}
+body{ padding:50px;}
+ul,ol{ list-style:none;}
+h3,div,ul,li,ol{ margin:0; padding:0;}
+.global_module h3{ height:35px; line-height:35px; text-align:center; background-color:#369; color:#f6f6f6;}
+.news ul li,.procatalog ul li{ height:30px; line-height:30px; color:#666; border-bottom:1px dashed #d0d0d0; padding-left:15px; }
+.procatalog ul li{ height:auto; border:none; padding-left:2em;}
+.procatalog ul li.m-expanded{ background:url(images/treeview-expanded.gif) no-repeat 10px 8px;}
+.procatalog ul li.m-collapsed{background:url(images/treeview-collapsed.gif) no-repeat 10px 8px;}
+.procatalog ul li ul li{border-bottom:1px dashed #d0d0d0; }
+.news,.procatalog{ width:220px; border:1px solid #069;}
+
+.news .scrollNews{ height:150px; overflow:hidden;}
+</style>
+<script src="scripts/jquery-1.3.1.js" type="text/javascript"></script>
+<script>
+
+$(function(){
+	  $(".m-treeview>li>span").click(function(){
+		  var $ul=$(this).next("ul");//获得它的兄弟元素
+		  $ul.toggle();//兄弟元素切换隐藏或者显示
+		  if($ul.is(":visible")){//如果兄弟元素是显示的
+			  $(this).parent().attr("class","m-expanded");//那么span的父亲元素 class 为m-expanded（展开的）
+			  }else{
+				$(this).parent().attr("class","m-collapsed"); //如果不是，class设置为 m-collapsed （收起的）； 
+				  }
+		  
+		  })
+	  
+	  })</script>
+</head>
+
+<body>
+<div class="global_module procatalog">
+			<h3>产品分类 <img src="images/down.gif"  class="icon-tip"alt="" /></h3>
+			<ul class="m-treeview">
+				<li class="m-expanded">
+					<span>衬衫</span>
+					<ul>
+						<li><span>短袖衬衫</span></li>
+						<li><span>长袖衬衫</span></li>	
+					</ul>
+				</li>
+				<li class="m-expanded">
+					<span>卫衣</span>
+					<ul>
+						<li ><span>开襟卫衣</span></li>
+						<li ><span>套头卫衣</span></li>	
+					</ul>
+				</li>
+				<li class="m-expanded">
+					<span>裤子</span>
+					<ul>
+						<li><span>休闲裤</span></li>
+						<li><span>免烫卡其裤</span></li>	
+						<li><span>牛仔裤</span></li>
+						<li><span>短裤</span></li>
+					</ul>
+				</li>
+		   </ul>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<!----Information-->
+<div class="mediaboxbg" style="background-image:url({dede:global.cfg_templets_skin/}/images/title02.jpg); height:200px; ">
+	<div class="mediabox">
+	
+		<div class="box500"><h1 style="color:#ffffff; padding-top:50px">即刻联络，开创品牌。 {dede:global.cfg_coemail/}</h1></div>
+		
+		<div class="box500" style="position:relative;">
+        <div class="c_weibo_p" style="position:absolute; left:450px; z-index:500; display:none;"><img src="{dede:global.cfg_cmsurl/}{dede:global.cfg_cowbxpic/}" style="width:100px; height:auto;"/></div>
+                    <div class="c_weixin_p" style="position:absolute; left:410px; z-index:501; display:none;"><img src="{dede:global.cfg_cmsurl/}{dede:global.cfg_wxpic/}" style="width:100px; height:auto;"/></div>
+                <ul class="social-links">   
+                                
+                    
+                    <li class="twitter"> <a href="###">微信</a></li>
+                    <li class="weibo"><a href="{dede:global.cfg_coweibox/}" target="_blank">Weibo</a></li>
+                </ul>
+		</div>
+
+	</div>
+</div>
+<!----/Information-->
+
+<!-- footer-->
+<div id="footer14" >
+	<div class="footerbox" style="width:86%; max-width:1200px; margin:auto;" >
+		<div class="footernav">
+			<div class="footermenu1">
+           <span><a href="{dede:global.cfg_indexurl/}">首页</a></span>
+            {dede:channelartlist   typeid='top'}
+	          
+	                <span><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></span>
+	                
+                    <!--{dede:channel type='son' noself='yes'}
+	                   <span> <a href="[field:typelink/]">[field:typename/]</a></span>
+                         {/dede:channel}-->
+	           
+                {/dede:channelartlist}
+                
+				
+			</div>
+			<div class="footermenu2">
+            {dede:channelartlist   typeid='12'}
+	          
+	                <span><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></span>
+	                
+                              
+                {/dede:channelartlist}
+				
+			</div>
+		</div>
+	<div class="footertools" style="text-align:right;">
+		<a href="{dede:global.cfg_indexurl/}"><img src="{dede:global.cfg_templets_skin/}/images/footer_logo.jpg"></img></a>
+	</div>
+	<div class="footercopyright">
+	©Copyright,All rights reserved. 本网站设计、源代码及其中所展示之作品著作权均属于郑州润美企业形象设计有限公司，保留所有权利。
+	</div>
+</div>
+<!-- footer/////////////-->
+
+</div>
+<a href="#top" id="toTop"></a>
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.skippr.js"></script>
+<script type="text/javascript">
+$(function(){
+		   $("li.twitter").hover(function(){
+										$(".c_weixin_p").fadeIn();
+										  },function(){
+											$(".c_weixin_p").fadeOut('fast');  
+											  });
+		    $("li.weibo").hover(function(){
+										$(".c_weibo_p").fadeIn();
+										  },function(){
+											$(".c_weibo_p").fadeOut('fast');  
+											  })
+			$(".footermenu1 span a").each(function(){
+												 $text=$(this).html();
+												$intxt=$text.replace(/([A-Z \s])+/,'')
+												 $(this).html($intxt);  
+												   })
+		   })
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?87df5307a789af37c71ef8632050fd04";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>

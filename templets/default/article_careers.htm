@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type"<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/style3.css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/jquery.skippr.css">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.scrollToTop.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.quicksand.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".titlebox").skippr();
+    
+    $(function() {
+    $("#toTop").scrollToTop(1000);
+});
+
+});
+</script>	
+</head>
+<!----/HEAD-->
+
+<body id="carrer">	
+{dede:include filename="headrm.htm"/}
+
+<!---Slider-->
+<div class="titlebox-nobg" style="background-image:url({dede:global.cfg_templets_skin/}/images/titlebg-01.jpg)">
+</div>
+
+		<div class="taglinebg" style="top:210px; height:50px;">
+			<div class="tagline" style="height:50px;">
+				<h1>招聘</h1>
+			</div>
+		</div>
+<!---/Slider--->	
+	
+<!--Brief-->
+
+<div class="mediaboxbg">
+	 <div class="place" style="color:#999;"> 当前位置: {dede:field name='position'/} </div>	
+ <style type="text/css">.place a{ color:#333; } .place{width:1200px; margin:0 auto; text-align:left;}</style>
+	<div class="mediabox" style="padding-top:60px; padding-bottom:110px; ">
+
+<!-------------2Column-->
+		<div class="box500" style="margin-bottom:50px;">
+			<h1 style="font-size:20px;">我们欢迎有理想的设计师</h1>
+		</div>
+
+
+		<div class="box500">
+			<p>
+				润美的业务在不断拓展，我们渴望能量超群、富于想象力的新生代设计师加入我们的团队。如果您充满着自信，并对品牌设计有着绝对的热爱，请将代表作品和简历email到:{dede:global.cfg_coemail/}，或qq:{dede:global.cfg_rmqq/}，感谢您的支持！		
+			</p>
+			
+		</div>		
+<!------------/2Column-->    
+
+
+    <div id="content" class="container clearfix" style="clear:both; border-top:1px solid #efefef;" >
+<br/>
+
+
+<br/>
+
+
+<h1 style="font-size:25px; font-family:'Microsoft YaHei';">{dede:field.title/}</h1>
+<div style="color:#666">
+ {dede:field.body/}
+ </div>
+</div>
+               
+        
+        
+    
+    </div>
+    <!-- /Content -->
+	</div>
+</div>
+<!--/Brief-->
+
+{dede:include filename="footerrm.htm"/}
+</body>
+<!-- body/////////////-->
+
+</html>
+>>

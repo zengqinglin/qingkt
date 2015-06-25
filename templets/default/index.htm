@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap 101 Template</title>
+<link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel="stylesheet">
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+
+<!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<style></style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">轻课</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="./">轻课堂</a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./a/course/">课程</a></li>
+        <!--<li><a href="#">计划</a></li>-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-sm">
+        <li>
+          <!--<div class="search-area">
+            <form id="search" action="" name="search-form" method="get">
+              <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+              <input type="button" class="btn_search js-btn-search">
+            </form>
+          </div>-->
+          
+        </li>
+        <!---登录--> 
+      	<ul id="_userlogin" class="nav navbar-nav navbar-right" >
+        <li><a href=""   data-toggle="modal" data-target=".signin">登录</a></li>
+        <li><a href="" class="link-register"  data-toggle="modal" data-target=".signin">注册</a></li>
+        </ul>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</nav>
+<!--导航ed-->
+<div class="q-banner">
+  <div class="color_blocks">
+    <div class="container_16">
+      <h1>UI 实战技能 从0开始</h1>
+      <h2>UI设计师学习教程平台</h2>
+      <div class="blocks">
+        <div class="subject_toggle flip-container army"> <a href="" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>384</strong><span>课程</span><strong>16,131</strong><span>视频教学</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container orange"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>580</strong><span>课程</span><strong>27,416</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container teal"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>1,124</strong><span>课程</span><strong>46,741</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container plum"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>527</strong><span>课程</span><strong>24,796</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container purple"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>1,183</strong><span>课程</span><strong>48,047</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container yellow"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>136</strong><span>课程</span><strong>5,757</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container green"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>277</strong><span>课程</span><strong>12,099</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container blue"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>507</strong><span>课程</span><strong>19,890</strong><span>视频教程</span></div>
+          </a> </div>
+        <div class="subject_toggle flip-container sky"> <a href="./a/course/" class="flipper">
+          <div class="front"><span>&nbsp;</span></div>
+          <div class="back"><strong>173</strong><span>课程</span><strong>6,274</strong><span>视频教程</span></div>
+          </a> </div>
+        <span class="black"><span>&nbsp;</span><a href="./a/course/" class="bg-yellow em-button small " data-qa="qa_join_now">Try it free</a></span> </div>
+      <p><a href="./a/course/">更多课程<span>&nbsp;</span></a></p>
+    </div>
+  </div>
+</div>
+<!--banner-->
+
+<div class="q-course">
+  <div class="container">
+    <h2 class="text-center color-yellow" >课程</h2>
+    <div class="course-list qkt-course-list">
+      <ul class="clearfix">
+       {dede:arclist infolen='52' typeid='12' addfields='softsize'  row='12'  channelid='17'}    
+<li class="course-one">
+    <a href="[field:arcurl/]">
+        <div class="course-list-img">
+        	<img width="240" height="135" alt="[field:title/]" src="[field:litpic/]">
+        </div>
+    	<h5><span>[field:title/]</span> </h5>
+        <div class="tips">
+            <p class="text-ellipsis">[field:shorttitle/]</p>
+            <span class="l update-latest">[field:color/]</span>
+            <span class="l ml20">[field:click/]人学习</span>
+        </div>
+        <span class="time-label">[field:softsize/]</span>
+     <!--   <b class="follow-label">跟我学</b>-->
+</a>
+</li>
+{/dede:arclist}
+        
+      </ul>
+      <p class="text-center"><a href="./a/course/" class="em-button yellow larger" target="_blank">开始学习</a></p>
+    </div>
+  </div>
+</div>
+
+<!--课程-->
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-md-12">轻课堂</h2>
+      <div class="col-md-6">
+        <p> 轻课堂，UI学习教程网站<br/>
+          为您提供海量优质课程，以及创新的在线学习体验
+          帮助您获得全新的个人发展和能力提升 </p>
+      </div>
+      <div class="col-md-6">
+        <div class="f-links text-right"><a href="/about/aboutus.htm#/about?aboutType=1" target="_blank">关于我们</a>- <a href="/about/aboutus.htm#/about?aboutType=2" target="_blank">联系我们</a>- <a href="/about/aboutus.htm#/about?aboutType=4" target="_blank">帮助中心</a>- <a href="/about/aboutus.htm#/about?aboutType=7" target="_blank">内容招募</a>- <a href="/about/aboutus.htm#/about?aboutType=8" target="_blank">意见反馈</a>- <a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a> </div>
+      </div>
+      <div class="copyright text-right">© 2015 学ui网</div>
+    </div>
+  </div>
+</div>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script> 
+<script src="{dede:global.cfg_templets_skin/}/js/bootstrap.min.js"></script> 
+<!--模块-->
+
+<div class="modal fade signin " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel"> <span class="active-title">登录</span> <span>注册</span> </h4>
+      </div>
+      <div class="modal-body">
+        <div class="singIn">
+          <form class="logIn"  action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
+          <input type="hidden" name="fmdo" value="login">
+        <input type="hidden" name="dopost" value="login">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="sr-only">用户名：</label>
+              
+              <input type="text" class="form-control ipt ipt-emall" id="exampleInputEmail1" name="userid" size="20"  placeholder="请输入邮箱">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="sr-only">密码：</label>
+              <input type="password" class="form-control ipt ipt-pwd" id="exampleInputPassword1"   name="pwd" size="20" placeholder="请输入密码">
+            </div>
+             
+          
+            {dede:php}
+        if(preg_match("#2#", $safe_gdopen))
+        {
+        echo '
+        <div class="form-group clearfix" >
+       
+         <input type="text" name="vdcode" size="8" class="ipt ipt-verify l" placeholder="请输入验证码" />
+           <a href="javascript:void(0)" class="verify-img-wrap js-verify-refresh"> <img id="vdimgck" align="absmiddle" onClick="this.src=this.src+\'?\'" style="cursor:pointer;margin-left:0px;text-transform:uppercase;" alt="看不清？点击更换" src="'.$cfg_cmspath.'/include/vdimgck.php" width="100"/>
+           </a><span class="verify-extra r"> 看不清<br>
+         <a href="javascript:void(0)"  onclick="changeAuthCode(\'#vdimgck\');"  class="js-verify-refresh">换一张</a> </span>
+            <p class="rlf-tip-wrap"> <span style="display: none;">请输入右侧图片内容</span> </p>
+         </div> 
+        ';
+        }
+       
+        {/dede:php}
+            
+            <div class="form-group clearfix">
+            
+            <button type="submit" class="btn btn-block bg-yellow yellow">提交</button>
+            </div>
+             <div class="form-group clearfix">
+              <label for="auto-signin" class="l" hidefocus="true">
+              
+                <input type="checkbox" checked="checked"  value="2592000" name="keeptime" id="ra1">
+                自动登录</label>
+               
+              <a href="{dede:global.cfg_memberurl/}/resetpassword.php" class="r" target="_blank" hidefocus="true">忘记密码 </a> </div>
+            
+          </form>
+        </div>
+        <div class="singUp" style="display:none;">
+        <form class="logIn"  action="{dede:global.cfg_cmspath/}/member/reg_new.php"  id="regUser" name="form2">
+          <input type="hidden" value="regbase" name="dopost"/>
+          <input type="hidden" value="1" name="step"/>
+          <input type="hidden" value="个人" name="mtype"/>
+          
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="sr-only">用户名：</label>
+            <input type="text" class="form-control ipt ipt-emall" id="email" name="email" placeholder="请输入邮箱"/>
+            <em id="_email">(每个电子邮邮箱只能注册一个帐号)</em> 
+            </div>
+          
+            <input type="hidden" class="intxt w200" size="20" id="uname" name="uname"/>
+           
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="sr-only">密码：</label>
+            <input type="password" onkeyup="setPasswordLevel(this, document.getElementById('passwordLevel'));" class="form-control ipt ipt-pwd" id="txtPassword"  name="userpwd" placeholder="请输入密码">
+            <input id="passwordLevel" class="rank r2" disabled="disabled" name="Input"/>
+          </div>
+          <div class="form-group">
+            <input type="password" id="userpwdok" name="userpwdok"  size="20" class="form-control ipt ipt-pwd" placeholder="请再次输入密码">
+            <em id="_userpwdok"><font color="red"><b>×两次输入密码不一致</b></font></em> </div>
+          <div class="form-group">
+            <input type="text" name="userid" id="txtUsername" class=" form-control ipt ipt-nick" placeholder="请输入用户昵称">
+            <em id="_userid">(可以使用中文，但禁止除[@][.]以外的特殊符号)</em> </div>
+          
+           {dede:php}
+        if(preg_match("#2#", $safe_gdopen))
+        {
+        echo '
+        <div class="form-group clearfix" >
+       
+         <input type="text" name="vdcode" size="8" class="ipt ipt-verify l" placeholder="请输入验证码" />
+           <a href="javascript:void(0)" class="verify-img-wrap js-verify-refresh"> <img id="vdimgck2" align="absmiddle" onClick="this.src=this.src+\'?\'" style="cursor:pointer;margin-left:0px;text-transform:uppercase;" alt="看不清？点击更换" src="'.$cfg_cmspath.'/include/vdimgck.php" width="100"/>
+           </a><span class="verify-extra r"> 看不清<br>
+         <a href="javascript:void(0)"  onclick="changeAuthCode(\'#vdimgck2\');"  class="js-verify-refresh">换一张</a> </span>
+            <p class="rlf-tip-wrap"> <span style="display: none;">请输入右侧图片内容</span> </p>
+         </div> 
+        ';
+        }
+       
+        {/dede:php}
+          <button type="submit" class="btn btn-block bg-yellow yellow" id="btnSignCheck">注册</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer"> </div>
+  </div>
+  <!-- /.modal-content --> 
+</div>
+</div>
+<script>
+  $(function(){
+	  $(".signin h4 span").each(function(index,value){
+		var i=index;
+		$(this).click(function(){
+			$(".active-title").removeClass("active-title");
+			$(this).addClass("active-title");
+			$(".signin .modal-body>div").hide();
+			$(".signin .modal-body>div:eq("+i+")").show();
+			})  
+		  
+	  })
+	  $(".link-register").click(function(){
+		
+		$(".active-title").removeClass("active-title");
+			$(".signin h4 span:eq(1)").addClass("active-title");
+			$(".signin .modal-body>div").hide();
+			$(".signin .modal-body>div:eq("+1+")").show(); 
+		  })
+	  
+	  })
+	  
+	 
+	 
+  </script> 
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script> 
+<script type="text/javascript" language="javascript" src='{dede:global.cfg_cmspath/}/member/templets/js/reg_new.js'></script> 
+<script src='{dede:global.cfg_cmspath/}/member/templets/js/CheckPassStrength.js' type="text/javascript" language="javascript"></script>
+
+<script>
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+</script>
+
+  <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<script type="text/javascript" language="javascript">
+
+
+var reMethod ='GET';
+var pwdmin ={dede:global.cfg_mb_pwdmin/};
+function changeAuthCode(str) {
+//	alert(str)
+	var num = 	new Date().getTime();
+	var rand = Math.round(Math.random() * 10000);
+	num = num + rand;
+	$('#ver_code').css('visibility','visible');
+	if ($(str)[0]) {
+		$(str)[0].src = "../include/vdimgck.php?tag=" + num;
+	}
+	return false;	
+}
+
+function hideVc()
+{
+	$('#ver_code').css('visibility','hidden');
+}
+
+
+$(document).ready(function(){ 
+	$("#passwordLevel").removeClass().addClass("rank r0");
+	$("#vdcode").focus(function(){
+	  var leftpos = $("#vdcode").position().left;
+	  var toppos = $("#vdcode").position().top - 42;
+	  $('#ver_code').css('left', leftpos+'px');
+	  $('#ver_code').css('top', toppos+'px');
+	  $('#ver_code').css('visibility','visible');
+	});
+	$("input[type='password']").click(function(){
+	  hideVc()
+	});
+	$("#txtUsername").click(function(){
+	  hideVc()
+	});
+	$("input[type='radio']").focus(function(){
+	  hideVc()
+	});
+	/*
+	$("#vdcode").blur(function(){
+		  $('#ver_code').css('visibility','hidden');
+	});
+	*/
+})
+$(function(){
+		$("#email").focus(function(){		
+
+		$("#_email").css("visibility","visible");
+		});
+	$("#txtPassword").focus(function(){
+		$("#passwordLevel").css("visibility","visible");
+		});
+	$("#userpwdok").focus(function(){
+		$("#_userpwdok").css("visibility","visible");
+		});
+	$("#txtUsername").focus(function(){
+		$("#_userid").css("visibility","visible");
+		});	
+	})
+
+</script>
+
+</body>
+</html>

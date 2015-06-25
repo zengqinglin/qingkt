@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type"<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/style3.css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/jquery.skippr.css">
+
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.scrollToTop.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.quicksand.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".titlebox").skippr();
+    
+    $(function() {
+    $("#toTop").scrollToTop(1000);
+});
+
+});
+</script>	
+</head>
+<!----/HEAD-->
+
+<body id="carrer">	
+{dede:include filename="headrm.htm"/}
+
+<!---Slider-->
+<div class="titlebox-nobg" style="background-image:url({dede:global.cfg_templets_skin/}/images/titlebg-01.jpg)">
+</div>
+
+		<div class="taglinebg" style="top:210px; height:50px;">
+			<div class="tagline" style="height:50px;">
+				<h1>招聘</h1>
+			</div>
+		</div>
+<!---/Slider--->	
+	
+<!--Brief-->
+
+<div class="mediaboxbg">
+	<div class="mediabox" style="padding-top:60px; padding-bottom:110px; ">
+
+<!-------------2Column-->
+		<div class="box500" style="margin-bottom:180px;">
+			<h1 style="font-size:20px;">我们欢迎有理想的设计师</h1>
+		</div>
+
+
+		<div class="box500">
+			<p>
+				润美的业务在不断拓展，我们渴望能量超群、富于想象力的新生代设计师加入我们的团队。如果您充满着自信，并对品牌设计有着绝对的热爱，请将代表作品和简历email到:{dede:global.cfg_coemail/}，或QQ:{dede:global.cfg_rmqq/}，感谢您的支持！		
+			</p>
+			
+		</div>		
+<!------------/2Column-->    
+
+
+    <div id="content" class="container clearfix" >
+	<h2>招聘</h2>
+        <!-- Projects 4 columns -->
+        <div id="projects">
+        
+			<ul id="stage" style="padding-left:1px; padding-top:1px;">
+            	 {dede:list pagesize='40' titlelen='250'}   
+
+
+               	<li style="height:400px;" class="joblist">
+                        <div class="view overlay" style="background-image:url(../image/about/job01.jpg)">
+                            <div class="mask" style="">
+                            
+                                <h3 style="color:#181818; border:0;"><b>[field:title/]</b></h3><br/><br/>
+                                
+                                <p style="color:#666">
+                                [field:description/]
+                                
+                                <br/><br/><br/>
+                                </p>
+                                <p style="position:absolute; top:270px;">
+								<a href="mailto:{dede:global.cfg_coemail/}" style="color:rgb(232,21,29)">发送简历和作品 </a><br/>
+                                <a href="[field:arcurl/]">查看详情</a>
+								</p>
+								
+									
+                            </div>
+                        </div>
+                    </a>    
+                </li>
+                
+                {/dede:list}
+              <!--  
+               	<li style="height:400px;">
+                        <div class="view overlay" style="background-image:url(../image/about/job02.jpg)">
+                            <div class="mask" style="background-color:#4bc1e1">
+                            
+                                <h3 style="color:#181818; border:0;"><b>资深设计师</b> SENIOR DESIGNER</h3>
+                                
+                                <p style="color:#181818">
+                                
+                                两年以上行业经验<br/>
+								独立完成平面设计工作，精通印刷流程<br/>
+								具备独特的视觉感受能力<br/>
+								有很好的工作主动性，良好的团队精神<br/>
+								有大型广告/设计机构经验者优先<br/>
+								热爱设计，热爱DESIGN!<br/><br/><br/>
+								<a href="mailto:handong0623@163.com">发送简历和作品 ></a>
+								
+								</p>
+									
+                            </div>
+                        </div>
+                    </a>    
+                </li>
+                
+                
+                
+                
+               	<li style="height:400px;">
+                        <div class="view overlay" style="background-image:url(../image/about/job03.jpg)">
+                            <div class="mask" style="background-color:#6bc04b">
+                            
+                                <h3 style="color:#181818; border:0;"><b>网页设计师</b> WEB DESIGNER</h3>
+                                
+                                <p style="color:#181818">
+                                
+                                熟悉相关设计开发软件技术<br/>
+								DW/HTML/JAVASCRIPT/ASP/PHP<br/>
+								有很好的工作主动性，良好的团队精神<br/>
+								熟悉相关设计软件<br/>
+								热爱CODE，热爱DESIGN!<br/><br/><br/>
+								<a href="mailto:handong0623@163.com">发送简历和作品 ></a>
+								
+								</p>
+									
+                            </div>
+                        </div>
+                    </a>    
+                </li>
+
+
+                
+                
+               	<li style="height:400px;">
+                        <div class="view overlay" style="background-image:url(../image/about/job04.jpg)">
+                            <div class="mask" style="background-color:#ccc794">
+                            
+                                <h3 style="color:#181818; border:0;"><b>设计总监</b> CREATIVE DIRECTOR</h3>
+                                
+                                <p style="color:#181818">
+                                
+                                4年以上行业经验<br/>
+								深厚的平面设计功底，资深的美学造诣<br/>
+								良好的提案能力和沟通技巧<br/>
+								有为国际性客户服务的经验优先<br/>
+								英语水平高者优先<br/>
+								具有丰富的团队管理经验和个性领导力<br/>
+								热爱设计，热爱DESIGN!<br/><br/><br/>
+								<a href="mailto:handong0623@163.com">发送简历和作品 ></a>
+								
+								</p>
+									
+                            </div>
+                        </div>
+                    </a>    
+                </li>
+               
+               	<li style="height:400px;">
+                        <div class="view overlay" style="background-image:url(../image/about/job05.jpg)">
+                            <div class="mask" style="background-color:#ffa5b5">
+                            
+                                <h3 style="color:#181818; border:0;"><b>文案策划</b> COPYWRITER</h3>
+                                
+                                <p style="color:#181818">
+                                
+                                3年以上行业经验<br/>
+								深厚的文字功底，资深的策划经验<br/>
+								良好的提案能力和沟通技巧<br/>
+								英语水平高者优先<br/>
+								具有丰富的设计团队协作经验<br/>
+								热爱设计，热爱DESIGN!<br/><br/><br/>
+								<a href="mailto:handong0623@163.com">发送简历和作品 ></a>
+								
+								</p>
+									
+                            </div>
+                        </div>
+                    </a>    
+                </li>-->
+              
+            </ul>
+                
+            
+        
+            
+        
+        </div>
+        <!-- /Projects 4 columns -->
+               
+        
+        
+    
+    </div>
+    <!-- /Content -->
+	</div>
+</div>
+<!--/Brief-->
+
+{dede:include filename="footerrm.htm"/}
+</body>
+<!-- body/////////////-->
+
+</html>

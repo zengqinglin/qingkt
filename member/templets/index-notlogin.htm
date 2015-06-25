@@ -1,0 +1,187 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <title><?php echo $cfg_webname; ?>- 会员登录</title>
+
+     
+      <link href="../templets/default/css/bootstrap.css" rel="stylesheet">
+      <link href="../templets/default/css/style.css" rel="stylesheet">
+   
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+  <body>
+  
+<nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">轻课</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">轻课堂</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">课程</a></li>
+             <li><a href="#">计划</a></li>            
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li>
+          <!--<div class="search-area">
+            <form action=""  id="search"  name="search-form" method="get">
+                <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+                <input type="button" class="btn_search js-btn-search">
+                
+            </form>
+        </div>-->
+            <!---登录-->
+          </li>
+           <ul id="_userlogin" class="nav navbar-nav navbar-right">
+           <div class="userinfo">
+
+			<div class="userface">
+			<a href="#" class="userName" style="border-radius:0; margin-top:0;"><?php echo $cfg_ml->M_UserName?></a>
+       
+    </div>
+    
+    <div id="user-block-pop">
+    
+    <div class="welcome">欢迎你<strong><?php echo $cfg_ml->M_UserName?></strong></div>
+    
+    
+    <div class="mylink">
+        <ul>
+         	<li><a href="mystow.php">我的收藏</a></li>
+          <!--  <li><a href="/member/guestbook_admin.php">我的留言</a></li>
+           
+            <li><a href="/member/article_add.php">发表文章</a></li>
+            <li><a href="/member/myfriend.php">好友管理</a></li>
+            <li><a href="/member/visit-history.php">访客记录</a></li>
+            <li><a href="/member/search.php">查找好友</a></li>-->
+        </ul>
+    </div>
+    <div class="uclink">
+    <a href="../member/index_do.php?fmdo=login&dopost=exit#">退出</a>
+   
+    <!--   <a href="/member/index.php">会员中心</a> | 
+        <a href="/member/edit_fullinfo.php">资料</a> | 
+        <a href="http://127.0.0.1/member/index.php?uid=mumu">空间</a> | 
+        -->
+    </div>
+    </div>
+</div><!-- /userinfo --></ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!--导航ed-->
+    
+    
+    
+    
+    <div class="base-info log" id="base-info">
+  <div class="container">
+  <div class="row">
+  	<div class="setting-left col-md-3">
+    <ul class="wrap-boxes list-group c-bg">
+    
+        <li class="nav-active">
+        <a href="reg-new.php" >注册</a>
+      </li>
+      <li >
+        <a href="log.php" class="onactive">登陆</a>
+      </li>
+    </ul>
+    </div>
+    <!--left-->
+    <div class="col-md-9 setting-right c-bg">
+    <h4 class="edit-head"><span class="on"><a href="">登陆</a></span><span><a href="reg_new.php" target="_self">注册</a></span></h4>
+    	<div class="base-setting-wrap setting-base edit_fullinfo">
+      
+       <form name='form1' method='POST' action='index_do.php'>
+      <input type="hidden" name="fmdo" value="login">
+      <input type="hidden" name="dopost" value="login">
+      <input type="hidden" name="gourl" value="<?php if(!empty($gourl)) echo $gourl;?>">
+      <div class="form-group clearfix">
+       <label class="col-sm-2 control-label" for="userid">用户名：</label>
+        <div class="col-sm-10">
+          <input id="txtUsername" class="text login_from form-control" type="text" name="userid"/>
+        </div>
+        </div>
+         <div class="form-group clearfix">
+         <label class="col-sm-2 control-label" for="pwd">密码：</label>
+       <div class="col-sm-10">
+          <input id="txtPassword" class="text login_from2 form-control" type="password" name="pwd"/>        </div>
+        </div>
+        <div class="form-group clearfix">
+       <label for="vdcode" class="col-sm-2 control-label"  >验证码：</label> 
+       <div class="col-sm-10">
+          <input id="vdcode" class="text login_from3  form-control"  type="text" style="width:80px; float:left; text-transform: uppercase;" name="vdcode"/>
+          <img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/>
+           看不清？ <a href="#" onclick="changeAuthCode();">点击更换</a> 
+      </div>
+      </div>   
+         <div class="form-group clearfix"> <label for="keeptime"  class="col-sm-2 control-label">有效期：</label>
+         <div class="col-sm-10">
+          <input type="radio" value="2592000" name="keeptime" id="ra1"/>
+          <label for="ra1">一个月</label>
+          <input type="radio" checked="checked" value="604800" name="keeptime" id="ra2"/>
+          <label for="ra2">一周</label>
+          <input type="radio" value="86400" name="keeptime"  id="ra3"/>
+          <label for="ra3">一天</label>
+          <input type="radio" value="0" name="keeptime"  id="ra4"/>
+          <label for="ra4">即时</label></li>
+          </div>
+        </div>
+        <div class="col-sm-10 form-group col-sm-offset-2 clearfix">
+          <button id="btnSignCheck" class="button2 btn btn-lg yellow btn-block" type="submit">登&nbsp;录</button>
+          </div>
+          <div class="form-group clearfix">
+          <button type="button" style="margin-right:15px;" class="buttonGreen142 btn btn-xs r" onclick="javascript:location='../plus/alipay.php'">支付宝登录</button>
+          <a  class="r" href="resetpassword.php">忘记密码？</a>
+          </div>
+          
+    </form>
+        </div>
+    
+    </div>
+  <!---right-->
+  </div><!---row-->
+   
+
+    </div><!---container-->
+
+  </div><!---base-info-->
+    
+    
+    
+    
+  <script type="text/javascript">
+function changeAuthCode() {
+	var num = 	new Date().getTime();
+	var rand = Math.round(Math.random() * 10000);
+	num = num + rand;
+	$('#ver_code').css('visibility','visible');
+	if ($("#vdimgck")[0]) {
+		$("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+	}
+	return false;
+}
+
+</script>  
+    
+
+</body>
+</html>

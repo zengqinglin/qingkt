@@ -1,0 +1,1 @@
+<img style="height: 310px; width: 212.594px;" src=" [field:hapic/]" class="about_picli">

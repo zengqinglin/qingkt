@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+
+.fi{ position:fixed; height:50px; line-height:50px; background-color:#fefefe; width:100%; top:0; left:0;}
+ul{ list-style:none;}
+body{ background-color:#f0f0f0; padding-top:50px;}
+.fi .container{ width:1000px; margin:0 auto;}
+.container ul li{ float:left; width:120px; text-align:center;}
+
+</style>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<!--<script type="text/javascript" src="jquery-1.4.2.js"></script>-->
+
+<script type="text/javascript">
+$(function(){
+	$(".sc").css("height",600);
+	/*设置每一个 sc的高度*/
+	$(".sc:odd").css("background","#ff3");
+/*隔行换色*/
+$("ul li:eq(0)").click(function(){
+	/*第0个单击*/
+			$("html,body").animate({"scrollTop":0},500);
+			/*动画滚动到某一个位置*/
+	})
+	
+	
+	$("ul li:eq(1)").click(function(){
+			$("html,body").animate({"scrollTop":600},500);
+	})
+	$("ul li:eq(2)").click(function(){
+			$("html,body").animate({"scrollTop":1200},500);
+	})
+	$("ul li:eq(3)").click(function(){
+			$("html,body").animate({"scrollTop":1800},500);
+	})
+	$("ul li:eq(4)").click(function(){
+			$("html,body").animate({"scrollTop":2400},500);
+	})
+	$("ul li:eq(5)").click(function(){
+			$("html,body").animate({"scrollTop":3000},500);
+	})
+	$("ul li:eq(6)").click(function(){
+			$("html,body").animate({"scrollTop":3600},500);
+	})
+	$("ul li:eq(7)").click(function(){
+			$("html,body").animate({"scrollTop":4200},500);
+	})
+	
+	})
+</script>
+</head>
+
+<body>
+<div class="fi"><div class="container"><ul><li>第一屏</li><li>第二屏</li><li>第三屏</li><li>第四屏</li><li>第五屏</li><li>第六屏</li><li>第7屏</li></ul></div></div>
+<div class="sc"><h1>1</h1></div>
+<div class="sc"><h1>2</h1></div>
+<div class="sc"><h1>3</h1></div>
+<div class="sc"><h1>4</h1></div>
+<div class="sc"><h1>5</h1></div>
+<div class="sc"><h1>6</h1></div>
+<div class="sc"><h1>7</h1></div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <title>更改帐号基本资料 密码 - 会员中心</title>
+
+     
+      <link href="../templets/default/css/bootstrap.css" rel="stylesheet">
+      <link href="../templets/default/css/style.css" rel="stylesheet">
+   
+
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <style>
+
+ </style>
+  </head>
+  <body>
+  
+  <?php include("../templets/default/qkt_head.htm"); ?>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="header">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">轻课</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">轻课堂</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">课程</a></li>
+             <li><a href="#">计划</a></li>            
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li>
+          <!--<div class="search-area">
+            <form action=""  id="search"  name="search-form" method="get">
+                <input class="search-input" placeholder="搜索课程、问答" type="text" autocomplete="off" name="words" value="">
+                <input type="button" class="btn_search js-btn-search">
+                
+            </form>
+        </div>-->
+            <!---登录-->
+          </li>
+           <ul id="_userlogin" class="nav navbar-nav navbar-right">
+           <div class="userinfo">
+
+			<div class="userface">
+			<a href="#" class="userName" style="border-radius:0; margin-top:0;"><?php echo $cfg_ml->M_UserName?></a>
+       
+    </div>
+    
+    <div id="user-block-pop">
+    
+    <div class="welcome">欢迎你<strong><?php echo $cfg_ml->M_UserName?></strong></div>
+    
+    
+    <div class="mylink">
+        <ul>
+         	<li><a href="mystow.php">我的收藏</a></li>
+          <!--  <li><a href="/member/guestbook_admin.php">我的留言</a></li>
+           
+            <li><a href="/member/article_add.php">发表文章</a></li>
+            <li><a href="/member/myfriend.php">好友管理</a></li>
+            <li><a href="/member/visit-history.php">访客记录</a></li>
+            <li><a href="/member/search.php">查找好友</a></li>-->
+        </ul>
+    </div>
+    <div class="uclink">
+    <a href="../member/index_do.php?fmdo=login&dopost=exit#">退出</a>
+   
+    <!--   <a href="/member/index.php">会员中心</a> | 
+        <a href="/member/edit_fullinfo.php">资料</a> | 
+        <a href="http://127.0.0.1/member/index.php?uid=mumu">空间</a> | 
+        -->
+    </div>
+    </div>
+</div><!-- /userinfo --></ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!--导航ed-->
+  
+<div class="base-info" id="base-info">
+  <div class="container">
+  <div class="row">
+  	<div class="setting-left col-md-3">
+    <ul class="wrap-boxes list-group c-bg">
+    
+      <li class="nav-active">
+        <a href="edit_fullinfo.php" class="onactive">个人资料</a>
+      </li>
+      <li >
+        <a href="edit_baseinfo.php">修改密码</a>
+      </li>
+      <li>
+         <a href="edit_face.php">头像设置</a>
+       </li>
+    <!--  <li >
+        <a href="/user/setverifyemail">邮箱验证</a>
+      </li>-->
+      
+      <!--<li >
+        <a no-pjajx="" href="/user/setbindsns">绑定帐号</a>
+      </li>-->
+    </ul>
+    </div>
+    <!--left-->
+    <div class="col-md-9 setting-right c-bg">
+    <h4 class="edit-head">个人资料</h4>
+    	<div class="base-setting-wrap setting-base edit_fullinfo">
+        <form method="post" action="edit_fullinfo.php" name="form1">
+      <input type="hidden" value="save" name="dopost"/>
+      <input type="hidden" value="<?php echo $membermodel->modid;?>" name="modid"/>
+    <div id="mainCp">
+       
+        <div class="postForm">
+    
+        <?php
+            echo $postform;
+        ?>
+      <p>
+       <label>&nbsp;</label>
+          <button type="submit" id="btnSignCheck" class="buttonGreen142">完 成 </button>
+      </p>   
+    </div>
+    </div>
+     </form>
+        </div>
+    
+    </div>
+  <!---right-->
+  </div>
+   
+
+    </div>
+
+  </div>
+
+
+   
+    <script src="js/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="templets/js/j.js"></script>
+<script type="text/javascript" language='javascript'src='templets/js/main.js'></script>
+<script type="text/javascript" src="templets/js/load.js"></script>
+<script type="text/javascript" src="templets/js/leftmenu.js"></script>
+<script type="text/javascript">  
+  function checkSubmit()
+{
+	if(document.form2.oldpwd.value=='')
+	{
+		document.form2.oldpwd.focus();
+		alert("旧密码必须填写！");
+		return false;
+	}
+	if(document.form2.userpwdok.value!=document.form2.userpwd.value)
+	{
+		document.form2.userpwdok.focus();
+		alert("两次密码不一致！");
+		return false;
+	}
+	if(document.form2.email.value=="")
+	{
+		document.form2.email.focus();
+		alert("Email不能为空！");
+		return false;
+	}
+	if(document.form2.uname.value=="")
+	{
+		document.form2.uname.focus();
+		alert("用户昵称不能为空！");
+		return false;
+	}
+	if(document.form2.vdcode.value=="")
+	{
+		document.form2.vdcode.focus();
+		alert("验证码不能为空！");
+		return false;
+	}
+}
+</script>
+  </body>
+</html>

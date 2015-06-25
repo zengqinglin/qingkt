@@ -1,0 +1,384 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <title>Bootstrap 101 Template</title>
+
+     <link href="{dede:global.cfg_templets_skin/}/css/bootstrap.css" rel="stylesheet">
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+   
+      
+      <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+  <body>
+   {dede:include filename="qkt_header.htm"/}
+    <!--导航ed-->
+  
+<!--video-->
+<div class="video-wrap clearfix">
+ <aside class="left_side" style="left: 0px;">
+   <a href="javascript:;" class="btn_slide btn_left_slide"></a>
+   <div class="l_title">课程目录</div>
+   <div class="l_zy_list nano has-scrollbar learnchapter" id="divClassList" style="height: 456px;">
+     <div class="nano-content video" tabindex="0" style="right: -17px;">     
+     
+     {dede:channelartlist  cl='1' re='1' }          
+       <div class="l_zj">{dede:field name='typename'/}</div>
+       <ul style="display:block;">   
+       {dede:arclist titlelen='42' row='10'}      
+         <li cid="112852" class="">
+           <a onclick="" href="[field:arcurl/]" class="chac" >
+            [field:title /]        
+           </a>
+         </li>  
+          {/dede:arclist}       
+   </ul>
+   {/dede:channelartlist}
+      </div>
+     
+   </div>
+ </aside>
+
+
+ <div class="main_content" style="">
+            <div class="mc_wrap study_wrap">
+                              
+                    <div class="clearfix">
+                                 
+                        <div class="video_name" id="SectionTitle">{dede:field.title /}</div>
+                        <div class="r">
+                        {dede:prenext get='pre'/}
+                         {dede:prenext get='next'/}
+                            <a href="" class="fl chapter" id="prevSection">&lt; 上一节</a>
+                           <a href="javascript:;" class="chapter" id="nextSection">下一节 &gt;</a>
+                        </div>
+                    </div>
+                    <div id="J_Box" class="course-video-box">                   
+                                <div id="video-box" class=""></div>
+                                      <div class="next-box hide" id="J_NextBox">
+                                          <div class="next-inner">
+                                          <a href="/video/5673/0" class="again">重新观看</a>
+                                          <p>下一节课程: {dede:prenext get='next'/}</p>
+                                          <a class="btn bg-yellow" href="/video/5674">进入下一节</a>
+                                          </div>
+                                      </div>
+                    </div>
+
+       
+                    </div>
+</div>
+
+
+<!--video-->
+</div>
+
+
+<div class="course">
+  <div class="container">
+<!--coursemain-->
+<div class="coursemain clearfix">
+  <div class="course-content c-bg">
+    <nav class="course-tabs" >
+                    <ul id="tab_switch">
+
+                      <li tab="dirBrief" class="active">课程目录</li>
+                      <li tab="brief" class="c_jj curr">评论</li>
+                      
+                      
+                    </ul>
+  </nav>
+
+<div class="course_chapter_list">
+    <div class="course_chapter_list">
+
+
+    {dede:channelartlist   re='1' }
+    <div class="learnchapter  learnchapter-active ">
+        <h3> <span>-</span> <strong><i class="hasOpenOn"></i> {dede:field name='typename'/}</strong> </h3>
+        
+        <ul class="video">
+			 {dede:arclist titlelen='42' row='10'} 
+            <li> <a target="_blank" href="[field:arcurl/]" class="studyvideo"> [field:title /] <i></i> </a> </li>
+            {/dede:arclist}
+          </ul>
+    </div>
+    {/dede:channelartlist}
+   
+</div>
+ <div class="coment">
+ 	<div id="course_note">
+        <ul class="commentcon">
+         {dede:include file='ajaxfeedback3.htm' /} 
+             
+      </ul>
+      </div>
+      <!--page-->
+      <!--	<div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active">1</a><a href="/course/list?page=2">2</a><a href="/course/list?page=3">3</a><a href="/course/list?page=4">4</a><a href="/course/list?page=5">5</a><a href="/course/list?page=6">6</a><a href="/course/list?page=7">7</a><a href="/course/list?page=2">下一页</a><a href="/course/list?page=17">尾页</a></div>-->
+	<!--page-->
+ </div>
+</div>
+
+  <!--课程列表-->
+
+  </div>
+  <!--coursemain-->
+  <div class="sidebar ">
+  {dede:memberinfos }
+    <div class="teacher-block c-bg">
+      <h3>授课老师</h3>
+
+      <p class="t-name"><a href="#" class="t-pic"><img src="[field:face/]" width="80"></a><a href="#">[field:uname/]</a></p>
+      <div class="t-discrip">[field:lovemsg/]</div>
+    </div><!--blocked-->
+     {/dede:memberinfos}
+    <div class="teacher-block  c-bg">
+      <h3>资料下载</h3>
+      <ul class="downlist">
+           
+                
+            </ul> 
+    </div><!--bocked--->
+   
+     <div class="teacher-block c-bg">
+      <h3>相关课程</h3>
+      <ul>
+      
+      {dede:arclist flag='c' titlelen=42 row=6}  
+      
+<li class="clearfix course-list-relation">
+        <a href="[field:arcurl/]" class="course-cover"><img src="[field:litpic/]" width="108" height="60" border="0">
+        <span class="course-name">[field:title/]</span></a>
+      </li> 
+      {/dede:arclist}  
+     </ul>     
+    </div><!--bocked--->
+
+     
+
+    
+    
+  </div><!---siderbar ed--->
+</div>
+
+    </div>
+</div>
+<!--课程-->
+
+
+  <!--课程-->
+    {dede:include filename="qkt_footer.htm"/}
+
+   
+  <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script> 
+<script src="{dede:global.cfg_templets_skin/}/js/bootstrap.min.js"></script>
+    <script>
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+
+	$(".course-content>div:gt(0)").hide();
+	
+    $(function(){
+		$("#tab_switch>li").each(function(index, element) {
+            var i=index;
+			$(this).click(function(){
+				$("#tab_switch .active").removeClass("active");
+				$(this).addClass("active");
+				$(".course-content>div:visible").hide();
+				$(".course-content>div:eq("+i+")").show();
+				})
+        });
+	$(".learnchapter>h3").click(function(){
+		$(this).next(".video").slideToggle();
+		if($(this).find("span").html()=="+"){
+		$(this).find("span").html("-");
+		}else{
+			$(this).find("span").html("+");
+			}
+		})
+		})
+    </script>
+     <script src="{dede:global.cfg_templets_skin/}/js/jwplayer.js"></script>
+      <script src="{dede:global.cfg_templets_skin/}/js//jwplayer.html5.js"></script>
+
+   
+<script>  
+    var thePlayer;  //保存当前播放器以便操作  
+    $(function() {  
+       thePlayer = jwplayer('video-box').setup({
+            width:1200,
+            height:530,
+            videoTitile: "mumu",
+      primary: "flash",
+            autostart:true,
+            startparam: "start",
+            autochange:true,
+            playlist: [{
+                //image: "JW.jpg",
+                sources: [{dede:field name='softlinks' getvideo='1'/}]
+            }],
+            events: {
+                onReady: function() {//
+                    // if(OP_CONFIG.userInfo){
+                    //     thePlayer.seek(continueTime);
+                    // }
+                },
+                onComplete: function(){
+                
+                    $('#J_NextBox').removeClass('hide');
+                  //  sentLearnTime();
+                },
+            onBuffer:function(callback){//缓冲状态，缓冲图标显示
+
+          // playserWaitTime=new Date().getTime();
+          //  if(bufferType==1){
+          //   playerOldHd=thePlayer.getCurrentQuality();
+          //  };
+          // key=radKey(10)+playserWaitTime;
+          //sendVideoTestData(2,0,"",playserWaitTime,0);
+
+        },
+        onPlay:function(callback){//开始播放－缓冲结束
+
+          // if(callback.oldstate=="PAUSED" ){
+          //   return;
+          // }
+          // var bufferTme=new Date().getTime()-playserWaitTime;
+          // //sendVideoTestData(1,bufferTme,"",new Date().getTime(),1);
+
+        },
+         onQualityChange :function(callback){
+          //console.log("onQualichange-----");
+        },
+
+        onError:function (callback){
+          // loadVideo(callback.message)
+        }
+            }
+        })
+       
+var tflag=true;
+$(".btn_left_slide").click(function(){
+if(tflag){
+$(".left_side").animate({"left":"-=300"},200);
+$(".video-wrap").animate({"padding-left":"20"},200);
+tflag=false;
+}else{
+
+ $(".left_side").animate({"left":"+=300"},200); 
+ $(".video-wrap").animate({"padding-left":"300"},200);
+
+ tflag=true;  
+}
+
+})
+
+
+  
+
+
+
+// $(".btn_left_slide").toggle(
+
+// 	function(){
+// 		$(".left_side").animate({"left":"+=300"},1500);
+// 		},
+// 	function(){
+// 		$(".left_side").animate({"left":"-=300"},1500);
+// 		}
+// 	)
+	      
+   
+	
+	
+	 
+	  
+    });  
+</script>  
+  
+  </body>
+</html>
